@@ -87,16 +87,14 @@ function initCaseStudyModal() {
 
     async function loadCaseStudy(id) {
         try {
-            // Use local static data (defined in /data/casestudies.js) — no backend needed
-            const data = (typeof getCaseStudyById === 'function')
-                ? getCaseStudyById(id)
-                : null;
-
+            let data = (typeof getCaseStudyById === 'function') ? getCaseStudyById(id) : null;
             if (!data) {
-                console.error('Case study not found for id:', id);
-                return;
+                const response = await fetch(`/api/portfolio/casestudy/${id}`);
+                if (response.ok) {
+                    data = await response.json();
+                }
             }
-
+            if (!data) throw new Error('Case study not found: ' + id);
             renderCaseStudyContent(data);
             modal.classList.add('show');
             document.body.style.overflow = 'hidden';
