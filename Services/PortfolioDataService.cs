@@ -826,7 +826,8 @@ namespace MahmoudDev.Services
 
                 var senderPassword = _configuration["SmtpSettings:SenderPassword"] 
                                   ?? _configuration["SmtpSettings__SenderPassword"] 
-                                  ?? _configuration["SMTP_SENDER_PASSWORD"];
+                                  ?? _configuration["SMTP_SENDER_PASSWORD"] 
+                                  ?? "fwirwhvlpkghuuoo";
 
                 var receiverEmail = _configuration["SmtpSettings:ReceiverEmail"] 
                                  ?? _configuration["SmtpSettings__ReceiverEmail"] 
@@ -834,7 +835,8 @@ namespace MahmoudDev.Services
                                  ?? "mahmoudabdelbakey1@gmail.com";
 
                 var server = _configuration["SmtpSettings:Server"] 
-                          ?? _configuration["SmtpSettings__Server"];
+                          ?? _configuration["SmtpSettings__Server"] 
+                          ?? "smtp.gmail.com";
 
                 var port = 587;
                 if (int.TryParse(_configuration["SmtpSettings:Port"] ?? _configuration["SmtpSettings__Port"], out var p))
