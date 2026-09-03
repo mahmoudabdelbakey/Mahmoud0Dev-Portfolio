@@ -1,0 +1,11 @@
+﻿{
+  "version": 2,
+  "functions": {
+    "api/contact.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/contact", "destination": "/api/contact.js" }
+  ]
+}

@@ -1,0 +1,846 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Stack .NET Developer | Mahmoud Abd-Elbakey — Full Stack .NET Developer</title>
+  <meta name="description" content="Personal portfolio of Mahmoud Abd-Elbakey, a Full Stack .NET Developer under the brand Mahmoud.Dev. I don't just build your idea — I help make it better." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/design-system.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="navbar" role="banner">
+  <div class="container nav-container">
+    <a href="/#home" class="nav-brand" aria-label="Mahmoud.Dev Home">
+      <img src="/images/mahmoud.jpg" alt="Mahmoud" style="width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:center 15%;border:2px solid var(--teal-primary);box-shadow:var(--shadow-sm);" />
+      <span>Mahmoud<span style="color:var(--teal-primary);">.Dev</span></span>
+    </a>
+    <ul class="nav-links" id="mainNavLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#journey" class="nav-link">Journey</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Color Theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">Let's Talk</a>
+      <button type="button" class="nav-toggle-mobile" id="navToggleBtn" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+<!-- ===== PAGE 1: HERO ===== -->
+<section id="home" class="section hero-section">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text-content">
+        <div class="hero-badge-pill">
+          <span class="hero-badge-dot"></span>
+          <span>Available for Select Client Projects &amp; .NET Roles</span>
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="highlight-teal">Mahmoud Abd-Elbakey</span>.<br />
+          Full Stack&nbsp;.NET Developer.
+        </h1>
+        <p class="hero-value-prop">I turn ideas into attractive, effective, and useful digital experiences through modern .NET, solid system architecture, and thoughtful user-centered problem solving.</p>
+        <div class="hero-brand-philosophy">"I don't just build your idea — I help make it better."</div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary"><span>View My Work</span><span>↓</span></a>
+          <a href="#contact" class="btn btn-secondary"><span>Let's Work Together</span><span>→</span></a>
+          <button type="button" id="openResumeBtn" class="btn btn-secondary btn-sm"><span>📄 View Resume</span></button>
+        </div>
+        <div class="hero-tech-strip">
+          <span class="hero-tech-label">Core Stack:</span>
+          <span class="badge badge-teal">C#</span>
+          <span class="badge badge-teal">ASP.NET Core</span>
+          <span class="badge badge-teal">Web API</span>
+          <span class="badge badge-teal">EF Core</span>
+          <span class="badge badge-teal">SQL Server</span>
+          <span class="badge badge-sage">Vanilla JS</span>
+          <span class="badge badge-sage">Docker</span>
+        </div>
+      </div>
+      <div class="hero-visual-wrapper">
+        <div class="floating-chip chip-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+          <span>C# &amp; .NET 10</span>
+        </div>
+        <div class="floating-chip chip-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          <span>SQL Server</span>
+        </div>
+        <div class="floating-chip chip-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <span>REST API</span>
+        </div>
+        <div class="floating-chip chip-4">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          <span>ASP.NET Core</span>
+        </div>
+        <div class="hero-visual-card">
+          <div class="hero-avatar-box hero-avatar-float">
+            <img src="/images/mahmoud.jpg" alt="Mahmoud Abd-Elbakey — Full Stack .NET Developer" class="hero-avatar-img" />
+          </div>
+          <div style="text-align:center;margin-top:1.25rem;padding:0 0.5rem;">
+            <h3 style="font-size:1.15rem;margin-bottom:0.15rem;font-weight:800;letter-spacing:-0.02em;">Mahmoud Abd-Elbakey</h3>
+            <p style="font-size:0.8125rem;color:var(--text-muted);margin:0;">Full Stack .NET Developer &amp; Idea Partner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 2: ABOUT ===== -->
+<section id="about" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">About Mahmoud Abd-Elbakey</span>
+      <h2 class="section-title">The Mindset Behind the Code</h2>
+      <p class="section-description">Software development is more than syntax and frameworks. It is about understanding the human and business problem, asking the right questions, and turning concepts into resilient digital reality.</p>
+    </div>
+    <div class="about-quote-box" style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;text-align:left;">
+      <img src="/images/mahmoud.jpg" alt="Mahmoud" style="width:95px;height:95px;border-radius:50%;object-fit:cover;object-position:center 15%;border:3px solid var(--teal-primary);box-shadow:var(--shadow-md);flex-shrink:0;" />
+      <div style="max-width:720px;">
+        <div class="about-quote-text" style="font-size:clamp(1.2rem,2.2vw,1.6rem);margin-bottom:0.5rem;">"I don't just build what the client asks for. I take the time to understand the idea, uncover what's truly needed, and help make it better."</div>
+        <div class="about-quote-author">— Mahmoud | Full Stack .NET Developer</div>
+      </div>
+    </div>
+    <div class="grid-4">
+      <div class="pillar-card">
+        <div class="pillar-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3 class="pillar-title">Continuous Growth</h3>
+        <p class="pillar-text">With approximately 2 years of professional development and a deep background in computer science, I approach every project with relentless curiosity, always staying at the cutting edge of modern .NET.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3 class="pillar-title">Creative Thinking</h3>
+        <p class="pillar-text">I believe business systems should never be clumsy or painful to use. I bring creative UX intuition and smart architectural suggestions to every client specification.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg></div>
+        <h3 class="pillar-title">Technical Rigor</h3>
+        <p class="pillar-text">Deep mastery of C#, ASP.NET Core, EF Core, and SQL Server ensures that applications are secure, maintainable, testable, and built on sound design patterns (SOLID &amp; Clean Architecture).</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <h3 class="pillar-title">Root Problem Solving</h3>
+        <p class="pillar-text">I don't mask bugs with superficial patches. I locate the actual operational bottleneck — whether an unindexed table, a race condition, or a confusing user flow — and fix it at the foundation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 3: EDUCATION ===== -->
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Academic &amp; Professional Background</span>
+      <h2 class="section-title">Education &amp; Professional Credentials</h2>
+      <p class="section-description">A rigorous academic education combined with specialized professional training provided the bedrock for my engineering discipline and problem-solving instincts.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem;margin-bottom:0.75rem;flex-wrap:wrap;">
+            <span class="badge badge-teal">2020 — 2024</span>
+            <span class="badge badge-sage">Verified Track</span>
+          </div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.35rem;font-weight:700;">Bachelor of Science in Computer Science / Information Systems</h3>
+          <div style="font-size:0.875rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.85rem;">Faculty of Computers and Artificial Intelligence</div>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.55;margin-bottom:1rem;">Graduated with a solid theoretical and practical foundation in computer systems, object-oriented software engineering, relational database design, and network protocols.</p>
+          <div style="margin-bottom:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);">
+            <strong style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--teal-primary);display:block;margin-bottom:0.4rem;">Key Milestones:</strong>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.35rem;font-size:0.825rem;color:var(--text-secondary);">
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Graduation Project: Excellence award for an automated cloud-connected management portal built with .NET and SQL Server</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Consistently top tier in Database Systems, Operating Systems, and Advanced C# courses</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Led university study groups on Data Structures, Problem Solving, and Competitive Programming</span></li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);">
+          <span class="badge" style="font-size:0.7rem;">Object-Oriented Programming (OOP)</span>
+          <span class="badge" style="font-size:0.7rem;">Database Architecture &amp; Normalization</span>
+          <span class="badge" style="font-size:0.7rem;">Software Engineering Lifecycle (SDLC)</span>
+          <span class="badge" style="font-size:0.7rem;">Data Structures &amp; Algorithms</span>
+          <span class="badge" style="font-size:0.7rem;">Computer Networks &amp; Security</span>
+        </div>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem;margin-bottom:0.75rem;flex-wrap:wrap;">
+            <span class="badge badge-teal">2023 — 2024</span>
+            <span class="badge badge-sage">Verified Track</span>
+          </div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.35rem;font-weight:700;">Specialized .NET Full Stack Professional Track</h3>
+          <div style="font-size:0.875rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.85rem;">Information Technology Institute (ITI) / Professional Certification</div>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.55;margin-bottom:1rem;">Intensive professional training focusing on production-grade software delivery, enterprise architectural patterns, API security, and real-world project development under senior mentors.</p>
+          <div style="margin-bottom:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);">
+            <strong style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--teal-primary);display:block;margin-bottom:0.4rem;">Key Milestones:</strong>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.35rem;font-size:0.825rem;color:var(--text-secondary);">
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Completed 500+ hours of hands-on software development and live architectural code reviews</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Delivered a comprehensive end-to-end e-commerce and logistics capstone project</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Mastered performance profiling, database index tuning, and containerization with Docker</span></li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);">
+          <span class="badge" style="font-size:0.7rem;">ASP.NET Core Web API</span>
+          <span class="badge" style="font-size:0.7rem;">Entity Framework Core Internals</span>
+          <span class="badge" style="font-size:0.7rem;">SQL Server Query Optimization</span>
+          <span class="badge" style="font-size:0.7rem;">Clean Architecture &amp; SOLID Principles</span>
+          <span class="badge" style="font-size:0.7rem;">Docker Containerization</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 4: SKILLS ===== -->
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Technical Competencies</span>
+      <h2 class="section-title">Skills &amp; Architectural Toolkit</h2>
+      <p class="section-description">Organized by practical domain with real-world application context. No arbitrary percentage bars — only demonstrable engineering capabilities.</p>
+    </div>
+    <div class="skills-nav-tabs">
+      <button type="button" class="skill-tab-btn active" data-category="all">All Skills</button>
+      <button type="button" class="skill-tab-btn" data-category="Programming">Programming</button>
+      <button type="button" class="skill-tab-btn" data-category=".NET">.NET</button>
+      <button type="button" class="skill-tab-btn" data-category="Database">Database</button>
+      <button type="button" class="skill-tab-btn" data-category="Frontend">Frontend</button>
+      <button type="button" class="skill-tab-btn" data-category="Tools">Tools</button>
+    </div>
+
+    <!-- Programming -->
+    <div class="skill-category-block" data-category="Programming">
+      <div class="skill-category-header"><div><h3 class="skill-category-title">Core Programming</h3><p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Strong foundational logic, object-oriented design, algorithmic efficiency, and memory-conscious development.</p></div></div>
+      <div class="grid-3">
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">C#</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Primary language for scalable enterprise backends, asynchronous programming, modern C# 12/13 idioms, and clean code.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">C++</span><span class="badge">Proficient</span></div><p class="skill-card-context">Low-level system foundations, memory management understanding, data structures, and algorithmic rigor.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Python</span><span class="badge">Proficient</span></div><p class="skill-card-context">Automation scripts, quick prototyping, data parsing, and auxiliary tooling.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+      </div>
+    </div>
+
+    <!-- .NET -->
+    <div class="skill-category-block" data-category=".NET">
+      <div class="skill-category-header"><div><h3 class="skill-category-title">.NET Ecosystem</h3><p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Full stack application runtime, enterprise web APIs, high-throughput microservices, and database ORM design.</p></div></div>
+      <div class="grid-3">
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">.NET</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Cross-platform runtime, dependency injection, configuration, logging, and performance profiling.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">ASP.NET Core</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Robust middleware pipelines, high-performance web hosts, security, authentication, and filter pipelines.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Web API</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">RESTful architectural design, standard response contracts, rate limiting, and versioning.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">MVC</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Model-View-Controller pattern, Razor view rendering, view components, model validation, and CSRF protection.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Entity Framework Core</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Code-First/DB-First migrations, eager/lazy/explicit loading, query optimization, split queries, and change tracking.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">LINQ</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Expressive data querying, deferred execution, complex projections, and in-memory aggregation.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+      </div>
+    </div>
+
+    <!-- Database -->
+    <div class="skill-category-block" data-category="Database">
+      <div class="skill-category-header"><div><h3 class="skill-category-title">Database &amp; Persistence</h3><p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Relational modeling, indexing strategies, procedural data logic, and high-concurrency consistency.</p></div></div>
+      <div class="grid-3">
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">SQL Server</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Production relational database administration, execution plan analysis, clustering, and backup integrity.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">SQL</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Complex multi-table joins, subqueries, Common Table Expressions (CTEs), and window functions.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Database Design</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Normalization (1NF to 3NF), foreign key integrity constraints, entity-relationship modeling.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Stored Procedures</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Compiled server-side routines for secure, high-speed bulk transactions and strict business logic encapsulation.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Views</span><span class="badge">Proficient</span></div><p class="skill-card-context">Indexed and partitioned views simplifying reporting abstractions and shielding sensitive tables.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Triggers</span><span class="badge">Proficient</span></div><p class="skill-card-context">Data audit trails, automated timestamping, and referential validation safeguards.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+      </div>
+    </div>
+
+    <!-- Frontend -->
+    <div class="skill-category-block" data-category="Frontend">
+      <div class="skill-category-header"><div><h3 class="skill-category-title">Frontend &amp; Interface</h3><p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Modern, responsive, user-centered client experiences with seamless backend connectivity.</p></div></div>
+      <div class="grid-3">
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">HTML5</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Semantic structure, accessibility standards (WCAG), SEO best practices, and fast DOM hierarchy.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">CSS3</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Modern Flexbox, CSS Grid, custom properties, responsive breakpoints, smooth animations, and zero clutter.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">JavaScript</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Vanilla ES6+, asynchronous Fetch API, DOM manipulation, state handling, micro-interactions, and modular architecture.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-category-block" data-category="Tools">
+      <div class="skill-category-header"><div><h3 class="skill-category-title">Tooling &amp; DevOps</h3><p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Version control, containerization, IDE mastery, and interactive API documentation.</p></div></div>
+      <div class="grid-3">
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Git</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Branching strategies, interactive rebase, merge conflict resolution, and atomic commits.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">GitHub</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Pull request workflows, code review standards, issue tracking, and GitHub Actions CI/CD.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Docker</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Multi-stage Dockerfile container builds for ASP.NET Core apps and SQL Server containerized testing.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Visual Studio</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Deep diagnostic tools, memory profilers, integrated test runners, and Roslyn analyzers.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+        <div class="skill-card"><div><div class="skill-card-top"><span class="skill-name">Swagger / OpenAPI</span><span class="badge badge-teal">Core</span></div><p class="skill-card-context">Live interactive API documentation, schema generation, token authentication testing, and client contract sharing.</p></div><div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.05);font-size:0.75rem;color:var(--teal-primary);font-weight:600;">Verified in Production &amp; Projects</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 5: EXPERIENCE ===== -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Professional History</span>
+      <h2 class="section-title">Work Experience &amp; Impact</h2>
+      <p class="section-description">Demonstrated business outcomes, engineering contributions, and reliable execution in commercial and client-facing environments.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.75rem;margin-bottom:0.75rem;flex-wrap:wrap;">
+            <div><h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.2rem;">Full Stack .NET Developer</h3><div style="font-size:0.9rem;font-weight:600;color:var(--teal-primary);">Freelance &amp; Solutions Consultant • <span style="font-weight:normal;color:var(--text-muted);">Remote</span></div></div>
+            <span class="badge badge-teal">2024 — Present</span>
+          </div>
+          <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.55;margin-bottom:1.25rem;">Partnering directly with business founders and project stakeholders to design, architect, and deliver custom .NET web solutions, enterprise tools, and modernized database systems.</p>
+          <div style="margin-bottom:1.25rem;">
+            <strong style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--teal-primary);display:block;margin-bottom:0.4rem;">Core Responsibilities &amp; Delivery:</strong>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.4rem;font-size:0.85rem;color:var(--text-secondary);">
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">→</span><span>Conduct client discovery sessions to uncover root business problems and refine raw concepts into structured software specifications.</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">→</span><span>Architect and build full stack web applications using ASP.NET Core, EF Core, SQL Server, and responsive modern frontend interfaces.</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">→</span><span>Design and implement secure RESTful Web APIs documented with Swagger for web and mobile client integration.</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">→</span><span>Optimize slow legacy databases by diagnosing query plans, creating indexes, and rewriting queries into high-speed stored procedures.</span></li>
+            </ul>
+          </div>
+          <div style="background-color:var(--teal-light);border-left:3px solid var(--teal-primary);padding:0.85rem 1rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-bottom:1.25rem;">
+            <strong style="font-size:0.75rem;text-transform:uppercase;color:var(--teal-primary);display:block;margin-bottom:0.35rem;">Measurable Outcomes:</strong>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.3rem;">
+              <li style="font-size:0.825rem;color:var(--text-primary);">✓ Achieved an average 60%+ query performance improvement across client database environments.</li>
+              <li style="font-size:0.825rem;color:var(--text-primary);">✓ Helped clients automate over 100 collective weekly operational hours.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);">
+          <span class="badge badge-teal" style="font-size:0.725rem;">C#</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">ASP.NET Core</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">Web API</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">SQL Server</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">EF Core</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">JavaScript</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">Git</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">Docker</span>
+        </div>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.75rem;margin-bottom:0.75rem;flex-wrap:wrap;">
+            <div><h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.2rem;">Junior .NET Software Developer</h3><div style="font-size:0.9rem;font-weight:600;color:var(--teal-primary);">TechCore Digital Solutions • <span style="font-weight:normal;color:var(--text-muted);">Cairo, Egypt</span></div></div>
+            <span class="badge badge-teal">2023 — 2024</span>
+          </div>
+          <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.55;margin-bottom:1.25rem;">Developed backend services, maintained enterprise MVC applications, and collaborated in cross-functional agile sprints.</p>
+          <div style="margin-bottom:1.25rem;">
+            <strong style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--teal-primary);display:block;margin-bottom:0.4rem;">Core Responsibilities &amp; Delivery:</strong>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.4rem;font-size:0.85rem;color:var(--text-secondary);">
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">→</span><span>Implemented RESTful endpoints in ASP.NET Core Web API with clean request validation and standardized error handling.</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">→</span><span>Wrote unit and integration tests using xUnit, ensuring high reliability across business logic modules.</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">→</span><span>Maintained database schemas, wrote migrations in EF Core, and crafted parameterized SQL queries to prevent SQL injection.</span></li>
+              <li style="display:flex;align-items:flex-start;gap:0.4rem;"><span style="color:var(--teal-primary);font-weight:bold;">→</span><span>Collaborated with frontend developers and UI designers to integrate modern JavaScript interfaces with backend endpoints.</span></li>
+            </ul>
+          </div>
+          <div style="background-color:var(--teal-light);border-left:3px solid var(--teal-primary);padding:0.85rem 1rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-bottom:1.25rem;">
+            <strong style="font-size:0.75rem;text-transform:uppercase;color:var(--teal-primary);display:block;margin-bottom:0.35rem;">Measurable Outcomes:</strong>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.3rem;">
+              <li style="font-size:0.825rem;color:var(--text-primary);">✓ Resolved 80+ backlog issues and feature tickets with a near-zero regression rate.</li>
+              <li style="font-size:0.825rem;color:var(--text-primary);">✓ Received commendation for proactive communication and code clarity during peer reviews.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);">
+          <span class="badge badge-teal" style="font-size:0.725rem;">C#</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">ASP.NET Core MVC</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">Entity Framework Core</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">SQL Server</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">LINQ</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">HTML5</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">CSS3</span>
+          <span class="badge badge-teal" style="font-size:0.725rem;">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 6: JOURNEY ===== -->
+<section id="journey" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Career Evolution</span>
+      <h2 class="section-title">The Journey of Growth</h2>
+      <p class="section-description">From a curious student writing terminal scripts to an idea-driven Full Stack .NET Developer crafting high-value digital solutions.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:1.5rem;"><div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;gap:0.5rem;flex-wrap:wrap;"><span class="badge badge-teal" style="font-weight:800;">Stage 01</span><span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;">2020 — 2021</span></div><h3 style="font-size:1.15rem;margin-bottom:0.2rem;font-weight:700;">Curiosity &amp; The Algorithmic Spark</h3><div style="font-size:0.8rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">Student &amp; Logic Explorer</div><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;margin-bottom:0.85rem;">My journey began with a curiosity about how digital systems turn abstract lines of code into real-world utility. Writing C++ and Python, I spent countless hours dissecting algorithms, understanding memory layouts, and discovering the joy of solving intricate logic puzzles.</p><div style="margin-bottom:0.85rem;padding-top:0.6rem;border-top:1px solid rgba(0,0,0,0.06);"><strong style="font-size:0.725rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);display:block;margin-bottom:0.35rem;">Milestones:</strong><ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.3rem;font-size:0.8rem;color:var(--text-secondary);"><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Mastered data structures (arrays, linked lists, trees, graphs, hash tables)</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Solved 250+ algorithmic challenges on competitive programming platforms</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Built terminal-based utilities and discovered a passion for clean architecture</span></li></ul></div></div><div style="background-color:var(--bg-secondary);border-left:3px solid var(--teal-primary);padding:0.6rem 0.8rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:0.775rem;font-weight:600;color:var(--text-primary);margin-top:0.5rem;">Built the foundational mindset: code is not just syntax; it is structured problem solving.</div></div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:1.5rem;"><div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;gap:0.5rem;flex-wrap:wrap;"><span class="badge badge-teal" style="font-weight:800;">Stage 02</span><span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;">2021 — 2022</span></div><h3 style="font-size:1.15rem;margin-bottom:0.2rem;font-weight:700;">The .NET Awakening &amp; Core Mastery</h3><div style="font-size:0.8rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">Deep Dive into Enterprise C# &amp; Databases</div><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;margin-bottom:0.85rem;">Transitioning to C# felt like discovering a superpower. The elegance of C#, the robustness of the .NET runtime, and the sheer power of SQL Server relational modeling clicked together.</p><div style="margin-bottom:0.85rem;padding-top:0.6rem;border-top:1px solid rgba(0,0,0,0.06);"><strong style="font-size:0.725rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);display:block;margin-bottom:0.35rem;">Milestones:</strong><ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.3rem;font-size:0.8rem;color:var(--text-secondary);"><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Deep dive into C# OOP, generics, LINQ, and delegates</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Mastered relational database design, 3NF normalization, and complex SQL joins</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Built first full database-connected inventory and student management systems</span></li></ul></div></div><div style="background-color:var(--bg-secondary);border-left:3px solid var(--teal-primary);padding:0.6rem 0.8rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:0.775rem;font-weight:600;color:var(--text-primary);margin-top:0.5rem;">Realized that great software begins with solid data architecture and clean class contracts.</div></div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:1.5rem;"><div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;gap:0.5rem;flex-wrap:wrap;"><span class="badge badge-teal" style="font-weight:800;">Stage 03</span><span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;">2022 — 2023</span></div><h3 style="font-size:1.15rem;margin-bottom:0.2rem;font-weight:700;">Building Beyond Specs: The Web Era</h3><div style="font-size:0.8rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">ASP.NET Core, APIs &amp; Frontend Integration</div><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;margin-bottom:0.85rem;">I stepped into web application development with ASP.NET Core MVC and Web API, building real products with authentication, file handling, database migrations, and responsive JavaScript interfaces.</p><div style="margin-bottom:0.85rem;padding-top:0.6rem;border-top:1px solid rgba(0,0,0,0.06);"><strong style="font-size:0.725rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);display:block;margin-bottom:0.35rem;">Milestones:</strong><ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.3rem;font-size:0.8rem;color:var(--text-secondary);"><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Built full-stack applications integrating ASP.NET Core with vanilla JS and modern CSS</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Implemented secure JWT authentication, role management, and session state</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Discovered that software succeeds or fails based on user experience, not just backend code</span></li></ul></div></div><div style="background-color:var(--bg-secondary);border-left:3px solid var(--teal-primary);padding:0.6rem 0.8rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:0.775rem;font-weight:600;color:var(--text-primary);margin-top:0.5rem;">Shifted from building isolated components to creating cohesive, end-to-end digital experiences.</div></div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:1.5rem;"><div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;gap:0.5rem;flex-wrap:wrap;"><span class="badge badge-teal" style="font-weight:800;">Stage 04</span><span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;">2023 — 2024</span></div><h3 style="font-size:1.15rem;margin-bottom:0.2rem;font-weight:700;">Real-World Commercial Experience</h3><div style="font-size:0.8rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">Production Deployments &amp; Collaborative Engineering</div><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;margin-bottom:0.85rem;">Stepping into professional software environments challenged me to handle concurrent users, edge cases, legacy code refactoring, database performance tuning, and cross-team communication.</p><div style="margin-bottom:0.85rem;padding-top:0.6rem;border-top:1px solid rgba(0,0,0,0.06);"><strong style="font-size:0.725rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);display:block;margin-bottom:0.35rem;">Milestones:</strong><ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.3rem;font-size:0.8rem;color:var(--text-secondary);"><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Delivered production features for commercial web applications under agile sprints</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Optimized database execution plans, reducing production query bottlenecks by up to 85%</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Contributed to CI/CD pipelines, Docker container setups, and Swagger API documentation</span></li></ul></div></div><div style="background-color:var(--bg-secondary);border-left:3px solid var(--teal-primary);padding:0.6rem 0.8rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:0.775rem;font-weight:600;color:var(--text-primary);margin-top:0.5rem;">Understood that clean code is code that teammates can read, maintain, and trust in production.</div></div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:1.5rem;"><div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;gap:0.5rem;flex-wrap:wrap;"><span class="badge badge-teal" style="font-weight:800;">Stage 05</span><span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;">2024 — Present</span></div><h3 style="font-size:1.15rem;margin-bottom:0.2rem;font-weight:700;">The Idea Partner Mindset</h3><div style="font-size:0.8rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">Turning Raw Concepts into Better Digital Solutions</div><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;margin-bottom:0.85rem;">This is where my core brand was born. I realized that the biggest gap in software development is truly understanding what a client needs and helping them make their idea better.</p><div style="margin-bottom:0.85rem;padding-top:0.6rem;border-top:1px solid rgba(0,0,0,0.06);"><strong style="font-size:0.725rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);display:block;margin-bottom:0.35rem;">Milestones:</strong><ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.3rem;font-size:0.8rem;color:var(--text-secondary);"><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Founded Mahmoud.Dev as an independent brand for high-quality .NET development</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Consulted for business founders, improving user flows, database models, and conversion rates</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Delivered standout solutions including LogiCore Express, MediConnect, and CommerceCraft</span></li></ul></div></div><div style="background-color:var(--bg-secondary);border-left:3px solid var(--teal-primary);padding:0.6rem 0.8rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:0.775rem;font-weight:600;color:var(--text-primary);margin-top:0.5rem;">Operating not just as a developer who writes code, but as a strategic technical partner who elevates client ideas.</div></div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;padding:1.5rem;"><div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;gap:0.5rem;flex-wrap:wrap;"><span class="badge badge-teal" style="font-weight:800;">Stage 06</span><span style="font-size:0.75rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;">Looking Forward</span></div><h3 style="font-size:1.15rem;margin-bottom:0.2rem;font-weight:700;">Continuous Evolution &amp; Future Horizons</h3><div style="font-size:0.8rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">Modern .NET 10, Cloud Architecture &amp; Global Impact</div><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.55;margin-bottom:0.85rem;">Technology never stands still, and neither do I. I continuously sharpen my skills with modern .NET 10 features, cloud-native deployments, asynchronous distributed architectures, and refined micro-interactions.</p><div style="margin-bottom:0.85rem;padding-top:0.6rem;border-top:1px solid rgba(0,0,0,0.06);"><strong style="font-size:0.725rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);display:block;margin-bottom:0.35rem;">Milestones:</strong><ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.3rem;font-size:0.8rem;color:var(--text-secondary);"><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Exploring cloud-native microservices and serverless integration on Azure</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Contributing to open-source developer tooling and technical writing</span></li><li style="display:flex;align-items:flex-start;gap:0.35rem;"><span style="color:var(--teal-primary);font-weight:bold;">•</span><span>Committed to lifelong mastery, technical excellence, and humble curiosity</span></li></ul></div></div><div style="background-color:var(--bg-secondary);border-left:3px solid var(--teal-primary);padding:0.6rem 0.8rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:0.775rem;font-weight:600;color:var(--text-primary);margin-top:0.5rem;">Remaining perpetually curious, committed to quality, and eager to take on increasingly ambitious challenges.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 7: WHY ME ===== -->
+<section id="whyme" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">The Client Advantage</span>
+      <h2 class="section-title">"I Don't Just Implement Ideas — I Help Improve Them"</h2>
+      <p class="section-description">Software development is not about blindly writing code. It is about understanding the root challenge, questioning assumptions, and engineering an optimal, resilient digital solution.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2.5rem;">
+      <div class="card" style="padding:1.25rem;text-align:center;border-top:3px solid var(--teal-primary);"><div style="font-size:0.75rem;font-weight:800;color:var(--teal-primary);text-transform:uppercase;margin-bottom:0.25rem;">01. The Problem</div><div style="font-weight:700;font-size:0.95rem;margin-bottom:0.35rem;">Root Diagnosis</div><p style="font-size:0.8rem;color:var(--text-muted);margin:0;line-height:1.45;">Uncovering underlying operational bottlenecks beyond superficial symptoms.</p></div>
+      <div class="card" style="padding:1.25rem;text-align:center;border-top:3px solid var(--teal-primary);"><div style="font-size:0.75rem;font-weight:800;color:var(--teal-primary);text-transform:uppercase;margin-bottom:0.25rem;">02. The Goal</div><div style="font-weight:700;font-size:0.95rem;margin-bottom:0.35rem;">Business Value</div><p style="font-size:0.8rem;color:var(--text-muted);margin:0;line-height:1.45;">Aligning software architecture with business efficiency, revenue, and growth.</p></div>
+      <div class="card" style="padding:1.25rem;text-align:center;border-top:3px solid var(--teal-primary);"><div style="font-size:0.75rem;font-weight:800;color:var(--teal-primary);text-transform:uppercase;margin-bottom:0.25rem;">03. The Users</div><div style="font-weight:700;font-size:0.95rem;margin-bottom:0.35rem;">Human Flow</div><p style="font-size:0.8rem;color:var(--text-muted);margin:0;line-height:1.45;">Engineering clean, frictionless workflows that people genuinely love using.</p></div>
+      <div class="card" style="padding:1.25rem;text-align:center;border-top:3px solid var(--teal-primary);"><div style="font-size:0.75rem;font-weight:800;color:var(--teal-primary);text-transform:uppercase;margin-bottom:0.25rem;">04. The Solution</div><div style="font-weight:700;font-size:0.95rem;margin-bottom:0.35rem;">Scalable System</div><p style="font-size:0.8rem;color:var(--text-muted);margin:0;line-height:1.45;">Guaranteeing data integrity, speed, security, and effortless maintainability.</p></div>
+    </div>
+    <div class="grid-3">
+      <div class="whyme-card" style="padding:1.75rem;"><div class="whyme-header" style="margin-bottom:0.75rem;"><span class="whyme-pillar-tag">Deep Understanding</span><h3 class="whyme-title" style="font-size:1.15rem;">I uncover the real problem behind the request</h3></div><div class="whyme-contrast-block" style="margin:0.75rem 0;gap:0.5rem;"><div class="whyme-contrast-item problem" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Typical Approach:</strong>Many developers jump straight into coding the moment they get a prompt, delivering something that matches words literally but fails the actual business goal.</div><div class="whyme-contrast-item approach" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Mahmoud's Approach:</strong>I take the time to listen, ask the right questions, understand your users, and analyze your operational workflows before writing a single line of code.</div></div><div class="whyme-impact" style="font-size:0.8rem;"><strong style="color:var(--teal-primary);">The Result:</strong> You get software that actually solves your operational bottleneck rather than another digital tool that creates headaches.</div></div>
+      <div class="whyme-card" style="padding:1.75rem;"><div class="whyme-header" style="margin-bottom:0.75rem;"><span class="whyme-pillar-tag">Idea Elevation</span><h3 class="whyme-title" style="font-size:1.15rem;">I take your concept and suggest ways to make it better</h3></div><div class="whyme-contrast-block" style="margin:0.75rem 0;gap:0.5rem;"><div class="whyme-contrast-item problem" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Typical Approach:</strong>You have a vision, but you might not know the technical possibilities, automation tricks, or UX patterns that can make it shine.</div><div class="whyme-contrast-item approach" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Mahmoud's Approach:</strong>I don't passively follow a checklist. I proactively brainstorm features, identify edge cases, and propose smart enhancements that make the final product more attractive and effective.</div></div><div class="whyme-impact" style="font-size:0.8rem;"><strong style="color:var(--teal-primary);">The Result:</strong> Your product launches with a competitive edge and superior user delight that you might not have originally planned for.</div></div>
+      <div class="whyme-card" style="padding:1.75rem;"><div class="whyme-header" style="margin-bottom:0.75rem;"><span class="whyme-pillar-tag">Root-Cause Problem Solving</span><h3 class="whyme-title" style="font-size:1.15rem;">I fix the bottleneck, not just the surface symptoms</h3></div><div class="whyme-contrast-block" style="margin:0.75rem 0;gap:0.5rem;"><div class="whyme-contrast-item problem" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Typical Approach:</strong>Quick duct-tape fixes cause recurring bugs, database slowdowns, and costly refactors months down the line.</div><div class="whyme-contrast-item approach" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Mahmoud's Approach:</strong>Whether analyzing a slow SQL query, resolving concurrency race conditions, or simplifying an awkward multi-step form, I engineer solutions that endure.</div></div><div class="whyme-impact" style="font-size:0.8rem;"><strong style="color:var(--teal-primary);">The Result:</strong> Your application runs smoothly under heavy loads with minimal ongoing maintenance costs.</div></div>
+      <div class="whyme-card" style="padding:1.75rem;"><div class="whyme-header" style="margin-bottom:0.75rem;"><span class="whyme-pillar-tag">User Experience Mindset</span><h3 class="whyme-title" style="font-size:1.15rem;">I believe enterprise software should feel enjoyable to use</h3></div><div class="whyme-contrast-block" style="margin:0.75rem 0;gap:0.5rem;"><div class="whyme-contrast-item problem" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Typical Approach:</strong>Many backend developers disregard the visual interface, resulting in clunky, confusing, and frustrating software.</div><div class="whyme-contrast-item approach" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Mahmoud's Approach:</strong>I pay meticulous attention to visual hierarchy, responsive layouts, clear error messages, and micro-interactions so every click feels natural and effortless.</div></div><div class="whyme-impact" style="font-size:0.8rem;"><strong style="color:var(--teal-primary);">The Result:</strong> Higher user adoption, lower training overhead for your staff, and glowing feedback from your clients.</div></div>
+      <div class="whyme-card" style="padding:1.75rem;"><div class="whyme-header" style="margin-bottom:0.75rem;"><span class="whyme-pillar-tag">Technical Integrity</span><h3 class="whyme-title" style="font-size:1.15rem;">Clean architecture, structured databases &amp; reliable .NET code</h3></div><div class="whyme-contrast-block" style="margin:0.75rem 0;gap:0.5rem;"><div class="whyme-contrast-item problem" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Typical Approach:</strong>Messy code bases become impossible to upgrade or hand over to other developers in the future.</div><div class="whyme-contrast-item approach" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Mahmoud's Approach:</strong>I build upon clean architecture, SOLID principles, well-documented REST APIs (Swagger), strict database constraints, and meaningful commit histories.</div></div><div class="whyme-impact" style="font-size:0.8rem;"><strong style="color:var(--teal-primary);">The Result:</strong> A reliable digital asset that is easily extensible as your business grows.</div></div>
+      <div class="whyme-card" style="padding:1.75rem;"><div class="whyme-header" style="margin-bottom:0.75rem;"><span class="whyme-pillar-tag">Transparent Partnership</span><h3 class="whyme-title" style="font-size:1.15rem;">Proactive communication with zero mystery or guesswork</h3></div><div class="whyme-contrast-block" style="margin:0.75rem 0;gap:0.5rem;"><div class="whyme-contrast-item problem" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Typical Approach:</strong>Clients often fear disappearing developers who go dark for weeks with no updates.</div><div class="whyme-contrast-item approach" style="padding:0.6rem 0.75rem;font-size:0.825rem;"><strong style="display:block;font-size:0.7rem;text-transform:uppercase;margin-bottom:0.15rem;">Mahmoud's Approach:</strong>I maintain consistent, clear communication throughout the project: regular milestone demos, transparent progress tracking, and honest feedback.</div></div><div class="whyme-impact" style="font-size:0.8rem;"><strong style="color:var(--teal-primary);">The Result:</strong> Complete peace of mind knowing your project is in dedicated, reliable hands every single step of the way.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 8: SERVICES ===== -->
+<section id="services" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Engineering Offerings</span>
+      <h2 class="section-title">Services Built for Business Impact</h2>
+      <p class="section-description">Tailored web engineering services focused on tangible client value, operational speed, and reliable .NET technical foundations.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;">
+      <div class="service-card" style="padding:1.75rem;"><div><div class="service-top-tag">End-to-End Solutions</div><h3 class="service-title" style="font-size:1.2rem;margin-bottom:0.75rem;">Full Stack Web Development</h3><div class="service-benefit-box" style="padding:0.65rem 0.85rem;margin-bottom:1rem;"><div class="service-benefit-title" style="font-size:0.7rem;">Client Benefit:</div><p class="service-benefit-text" style="font-size:0.825rem;">Get a cohesive, high-performing web application built from the database up to the user interface, eliminating communication gaps between separate frontend and backend teams.</p></div><p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.5;">Complete digital solutions engineered with modern ASP.NET Core on the backend and responsive, elegant HTML5/CSS3/JavaScript on the client.</p><ul class="service-deliverables" style="gap:0.3rem;margin-bottom:1.25rem;"><li style="font-size:0.825rem;">Full architectural blueprint</li><li style="font-size:0.825rem;">Responsive frontend UI</li><li style="font-size:0.825rem;">Secure ASP.NET Core backend</li><li style="font-size:0.825rem;">Database integration &amp; deployment</li></ul></div><div><div class="service-tags" style="gap:0.35rem;padding-top:0.75rem;"><span class="badge" style="font-size:0.7rem;">C#</span><span class="badge" style="font-size:0.7rem;">ASP.NET Core</span><span class="badge" style="font-size:0.7rem;">SQL Server</span><span class="badge" style="font-size:0.7rem;">EF Core</span><span class="badge" style="font-size:0.7rem;">JavaScript</span><span class="badge" style="font-size:0.7rem;">HTML5/CSS3</span></div><a href="#contact" class="btn btn-secondary btn-sm" style="width:100%;margin-top:0.85rem;text-align:center;">Inquire About This Service</a></div></div>
+      <div class="service-card" style="padding:1.75rem;"><div><div class="service-top-tag">Brand Presence</div><h3 class="service-title" style="font-size:1.2rem;margin-bottom:0.75rem;">Business Websites</h3><div class="service-benefit-box" style="padding:0.65rem 0.85rem;margin-bottom:1rem;"><div class="service-benefit-title" style="font-size:0.7rem;">Client Benefit:</div><p class="service-benefit-text" style="font-size:0.825rem;">Turn casual website visitors into paying clients with an elegant, fast-loading, and credible digital showcase that reflects the prestige of your company.</p></div><p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.5;">Custom-tailored business websites designed to highlight your services, showcase your team, build customer trust, and drive lead inquiries.</p><ul class="service-deliverables" style="gap:0.3rem;margin-bottom:1.25rem;"><li style="font-size:0.825rem;">Custom visual layout</li><li style="font-size:0.825rem;">Mobile &amp; tablet optimization</li><li style="font-size:0.825rem;">SEO-ready semantic markup</li><li style="font-size:0.825rem;">Lead capture forms &amp; analytics</li></ul></div><div><div class="service-tags" style="gap:0.35rem;padding-top:0.75rem;"><span class="badge" style="font-size:0.7rem;">ASP.NET Core MVC</span><span class="badge" style="font-size:0.7rem;">Responsive CSS Grid</span><span class="badge" style="font-size:0.7rem;">Vanilla JS</span><span class="badge" style="font-size:0.7rem;">Contact Endpoints</span></div><a href="#contact" class="btn btn-secondary btn-sm" style="width:100%;margin-top:0.85rem;text-align:center;">Inquire About This Service</a></div></div>
+      <div class="service-card" style="padding:1.75rem;"><div><div class="service-top-tag">Business Automation</div><h3 class="service-title" style="font-size:1.2rem;margin-bottom:0.75rem;">Custom Web Applications</h3><div class="service-benefit-box" style="padding:0.65rem 0.85rem;margin-bottom:1rem;"><div class="service-benefit-title" style="font-size:0.7rem;">Client Benefit:</div><p class="service-benefit-text" style="font-size:0.825rem;">Automate tedious daily operations, replace disjointed spreadsheets, and empower your team with tailored internal portals designed specifically for your workflows.</p></div><p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.5;">Bespoke SaaS tools, inventory trackers, customer management portals, and scheduling systems built to fit your exact business rules.</p><ul class="service-deliverables" style="gap:0.3rem;margin-bottom:1.25rem;"><li style="font-size:0.825rem;">Role-based user permissions</li><li style="font-size:0.825rem;">Automated workflow calculations</li><li style="font-size:0.825rem;">Data export &amp; audit logs</li><li style="font-size:0.825rem;">Real-time status tracking</li></ul></div><div><div class="service-tags" style="gap:0.35rem;padding-top:0.75rem;"><span class="badge" style="font-size:0.7rem;">C#</span><span class="badge" style="font-size:0.7rem;">ASP.NET Core</span><span class="badge" style="font-size:0.7rem;">SQL Server</span><span class="badge" style="font-size:0.7rem;">Stored Procedures</span><span class="badge" style="font-size:0.7rem;">JavaScript</span></div><a href="#contact" class="btn btn-secondary btn-sm" style="width:100%;margin-top:0.85rem;text-align:center;">Inquire About This Service</a></div></div>
+      <div class="service-card" style="padding:1.75rem;"><div><div class="service-top-tag">Core Infrastructure</div><h3 class="service-title" style="font-size:1.2rem;margin-bottom:0.75rem;">Backend Development</h3><div class="service-benefit-box" style="padding:0.65rem 0.85rem;margin-bottom:1rem;"><div class="service-benefit-title" style="font-size:0.7rem;">Client Benefit:</div><p class="service-benefit-text" style="font-size:0.825rem;">Ensure your digital product operates on a rock-solid, secure, and lightning-fast backend that never crumbles under high traffic.</p></div><p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.5;">Robust server-side logic, secure authentication pipelines, business rule processing, background task workers, and third-party integrations.</p><ul class="service-deliverables" style="gap:0.3rem;margin-bottom:1.25rem;"><li style="font-size:0.825rem;">Clean modular architecture</li><li style="font-size:0.825rem;">Security &amp; authentication (Identity/JWT)</li><li style="font-size:0.825rem;">Error logging &amp; health checks</li><li style="font-size:0.825rem;">Scalable data layer</li></ul></div><div><div class="service-tags" style="gap:0.35rem;padding-top:0.75rem;"><span class="badge" style="font-size:0.7rem;">C#</span><span class="badge" style="font-size:0.7rem;">.NET 10</span><span class="badge" style="font-size:0.7rem;">ASP.NET Core</span><span class="badge" style="font-size:0.7rem;">Dependency Injection</span><span class="badge" style="font-size:0.7rem;">Docker</span></div><a href="#contact" class="btn btn-secondary btn-sm" style="width:100%;margin-top:0.85rem;text-align:center;">Inquire About This Service</a></div></div>
+      <div class="service-card" style="padding:1.75rem;"><div><div class="service-top-tag">Connectivity &amp; Integration</div><h3 class="service-title" style="font-size:1.2rem;margin-bottom:0.75rem;">REST APIs</h3><div class="service-benefit-box" style="padding:0.65rem 0.85rem;margin-bottom:1rem;"><div class="service-benefit-title" style="font-size:0.7rem;">Client Benefit:</div><p class="service-benefit-text" style="font-size:0.825rem;">Connect mobile apps, web frontends, payment gateways, and third-party partners effortlessly with secure, standardized, and self-documenting APIs.</p></div><p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.5;">Design and implementation of RESTful APIs following industry standards, HTTP status semantics, payload validation, and interactive Swagger documentation.</p><ul class="service-deliverables" style="gap:0.3rem;margin-bottom:1.25rem;"><li style="font-size:0.825rem;">RESTful API endpoints</li><li style="font-size:0.825rem;">Interactive Swagger/OpenAPI docs</li><li style="font-size:0.825rem;">Token authentication &amp; rate limiting</li><li style="font-size:0.825rem;">Client SDK or contract models</li></ul></div><div><div class="service-tags" style="gap:0.35rem;padding-top:0.75rem;"><span class="badge" style="font-size:0.7rem;">ASP.NET Core Web API</span><span class="badge" style="font-size:0.7rem;">C#</span><span class="badge" style="font-size:0.7rem;">Swagger</span><span class="badge" style="font-size:0.7rem;">JSON</span><span class="badge" style="font-size:0.7rem;">JWT</span></div><a href="#contact" class="btn btn-secondary btn-sm" style="width:100%;margin-top:0.85rem;text-align:center;">Inquire About This Service</a></div></div>
+      <div class="service-card" style="padding:1.75rem;"><div><div class="service-top-tag">Data Engineering</div><h3 class="service-title" style="font-size:1.2rem;margin-bottom:0.75rem;">Database Development &amp; Optimization</h3><div class="service-benefit-box" style="padding:0.65rem 0.85rem;margin-bottom:1rem;"><div class="service-benefit-title" style="font-size:0.7rem;">Client Benefit:</div><p class="service-benefit-text" style="font-size:0.825rem;">Protect your company's most valuable asset — your data — while slashing query response times and preventing costly data corruption.</p></div><p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.5;">Relational database schema design, index optimization, complex stored procedures, database views, and automated data audit triggers.</p><ul class="service-deliverables" style="gap:0.3rem;margin-bottom:1.25rem;"><li style="font-size:0.825rem;">Normalized relational schema</li><li style="font-size:0.825rem;">Optimized stored procedures &amp; views</li><li style="font-size:0.825rem;">Index strategy &amp; execution tuning</li><li style="font-size:0.825rem;">Audit trail triggers</li></ul></div><div><div class="service-tags" style="gap:0.35rem;padding-top:0.75rem;"><span class="badge" style="font-size:0.7rem;">SQL Server</span><span class="badge" style="font-size:0.7rem;">T-SQL</span><span class="badge" style="font-size:0.7rem;">Stored Procedures</span><span class="badge" style="font-size:0.7rem;">Views</span><span class="badge" style="font-size:0.7rem;">Triggers</span><span class="badge" style="font-size:0.7rem;">EF Core</span></div><a href="#contact" class="btn btn-secondary btn-sm" style="width:100%;margin-top:0.85rem;text-align:center;">Inquire About This Service</a></div></div>
+      <div class="service-card" style="padding:1.75rem;"><div><div class="service-top-tag">Performance &amp; Refresh</div><h3 class="service-title" style="font-size:1.2rem;margin-bottom:0.75rem;">Website Improvement &amp; Modernization</h3><div class="service-benefit-box" style="padding:0.65rem 0.85rem;margin-bottom:1rem;"><div class="service-benefit-title" style="font-size:0.7rem;">Client Benefit:</div><p class="service-benefit-text" style="font-size:0.825rem;">Breathe new life into sluggish, outdated, or hard-to-use applications without throwing away your existing investment.</p></div><p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.5;">Auditing existing systems to improve user experience, increase page load speeds, resolve stubborn bugs, and upgrade old frameworks to modern .NET.</p><ul class="service-deliverables" style="gap:0.3rem;margin-bottom:1.25rem;"><li style="font-size:0.825rem;">Comprehensive performance audit</li><li style="font-size:0.825rem;">UI/UX responsiveness overhaul</li><li style="font-size:0.825rem;">Code refactoring &amp; security patch</li><li style="font-size:0.825rem;">Query speed optimization</li></ul></div><div><div class="service-tags" style="gap:0.35rem;padding-top:0.75rem;"><span class="badge" style="font-size:0.7rem;">.NET Migration</span><span class="badge" style="font-size:0.7rem;">CSS3 Modernization</span><span class="badge" style="font-size:0.7rem;">SQL Profiling</span><span class="badge" style="font-size:0.7rem;">Security Auditing</span></div><a href="#contact" class="btn btn-secondary btn-sm" style="width:100%;margin-top:0.85rem;text-align:center;">Inquire About This Service</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 9-10: PROJECTS ===== -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Flagship Work</span>
+      <h2 class="section-title">Projects &amp; In-Depth Case Studies</h2>
+      <p class="section-description">Explore real applications engineered with .NET, SQL Server, and modern architecture. Click "View Case Study" to see the full problem-to-result walkthrough.</p>
+    </div>
+    <div class="skills-nav-tabs" style="margin-bottom:3rem;">
+      <button type="button" class="skill-tab-btn project-filter-btn active" data-filter="all">All Projects</button>
+      <button type="button" class="skill-tab-btn project-filter-btn" data-filter="Enterprise Web App">Enterprise Web App</button>
+      <button type="button" class="skill-tab-btn project-filter-btn" data-filter="Healthcare System">Healthcare</button>
+      <button type="button" class="skill-tab-btn project-filter-btn" data-filter="E-Commerce">E-Commerce</button>
+      <button type="button" class="skill-tab-btn project-filter-btn" data-filter="Productivity SaaS">Productivity</button>
+    </div>
+    <div class="grid-2">
+      <!-- LogiCore Express -->
+      <div class="project-card" data-category="Enterprise Web App">
+        <div class="project-mockup-header"><span class="project-mockup-badge">Enterprise Web App</span><img src="/images/project-logicore.svg" alt="LogiCore Express Mockup" class="project-mockup-svg" /></div>
+        <div class="project-card-body"><div><h3 class="project-title">LogiCore Express</h3><div class="project-subtitle">Intelligent Fleet Dispatch &amp; Warehouse Logistics Engine</div><div class="project-value-box"><strong>Value Created:</strong> Transformed a slow 14-second reporting spreadsheet into an instant 200ms real-time dashboard while automating driver route allocation.</div><p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:1.25rem;">A mission-critical enterprise dispatching system transforming manual freight logging into an automated, real-time allocation and tracking hub.</p><div style="margin-bottom:1.25rem;"><strong style="font-size:0.8rem;text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:0.4rem;">Key Highlights:</strong><ul style="list-style:none;padding:0;font-size:0.875rem;display:flex;flex-direction:column;gap:0.3rem;"><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Real-time trip dispatcher with dynamic capacity load calculation</span></li><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Optimized SQL Server stored procedures cutting reporting queries by 85%</span></li><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Driver compliance and audit trail via SQL triggers</span></li></ul></div></div><div><div class="project-tags"><span class="badge badge-teal">C#</span><span class="badge badge-teal">ASP.NET Core</span><span class="badge badge-teal">Entity Framework Core</span><span class="badge badge-teal">SQL Server</span><span class="badge badge-teal">Stored Procedures</span><span class="badge badge-teal">JavaScript</span><span class="badge badge-teal">Docker</span></div><div class="project-card-actions"><button type="button" class="btn btn-primary btn-sm view-casestudy-btn" data-id="logicore-cs">View Case Study (Modal)</button><a href="#contact" class="btn btn-secondary btn-sm">Request Walkthrough</a></div></div></div>
+      </div>
+      <!-- MediConnect Health -->
+      <div class="project-card" data-category="Healthcare System">
+        <div class="project-mockup-header"><span class="project-mockup-badge">Healthcare System</span><img src="/images/project-mediconnect.svg" alt="MediConnect Health Mockup" class="project-mockup-svg" /></div>
+        <div class="project-card-body"><div><h3 class="project-title">MediConnect Health</h3><div class="project-subtitle">Multi-Clinic Patient Scheduling &amp; Teleconsultation Portal</div><div class="project-value-box"><strong>Value Created:</strong> Reduced patient no-show rates by 62% through automated smart reminders and eliminated double-booking via optimistic concurrency.</div><p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:1.25rem;">A HIPAA-aligned digital appointment and consultation workflow connecting specialized clinics with patients and attending physicians.</p><div style="margin-bottom:1.25rem;"><strong style="font-size:0.8rem;text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:0.4rem;">Key Highlights:</strong><ul style="list-style:none;padding:0;font-size:0.875rem;display:flex;flex-direction:column;gap:0.3rem;"><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Optimistic concurrency control preventing concurrent booking conflicts</span></li><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Multi-doctor shift scheduling with dynamic buffer slots</span></li><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Interactive patient portal with instant confirmation and prep instructions</span></li></ul></div></div><div><div class="project-tags"><span class="badge badge-teal">C#</span><span class="badge badge-teal">ASP.NET Core MVC</span><span class="badge badge-teal">Web API</span><span class="badge badge-teal">SQL Server</span><span class="badge badge-teal">Entity Framework Core</span><span class="badge badge-teal">LINQ</span><span class="badge badge-teal">JavaScript</span></div><div class="project-card-actions"><button type="button" class="btn btn-primary btn-sm view-casestudy-btn" data-id="mediconnect-cs">View Case Study (Modal)</button><a href="#contact" class="btn btn-secondary btn-sm">Request Walkthrough</a></div></div></div>
+      </div>
+      <!-- CommerceCraft Engine -->
+      <div class="project-card" data-category="E-Commerce">
+        <div class="project-mockup-header"><span class="project-mockup-badge">E-Commerce</span><img src="/images/project-commercecraft.svg" alt="CommerceCraft Engine Mockup" class="project-mockup-svg" /></div>
+        <div class="project-card-body"><div><h3 class="project-title">CommerceCraft Engine</h3><div class="project-subtitle">High-Throughput Modular E-Commerce &amp; Inventory Core</div><div class="project-value-box"><strong>Value Created:</strong> Boosted checkout throughput by 3.2x while guaranteeing 100% inventory accuracy under heavy flash-sale concurrency.</div><p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:1.25rem;">A custom commerce platform designed for flash sales, inventory reconciliation, and friction-free multi-step checkout.</p><div style="margin-bottom:1.25rem;"><strong style="font-size:0.8rem;text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:0.4rem;">Key Highlights:</strong><ul style="list-style:none;padding:0;font-size:0.875rem;display:flex;flex-direction:column;gap:0.3rem;"><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Idempotent order checkout pipeline with payment webhook integration</span></li><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Strict transactional inventory decrement with SQL Server isolation</span></li><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Category hierarchy management with recursive SQL CTE queries</span></li></ul></div></div><div><div class="project-tags"><span class="badge badge-teal">C#</span><span class="badge badge-teal">ASP.NET Core Web API</span><span class="badge badge-teal">Entity Framework Core</span><span class="badge badge-teal">SQL Server</span><span class="badge badge-teal">Database Design</span><span class="badge badge-teal">HTML5/CSS3</span><span class="badge badge-teal">JavaScript</span></div><div class="project-card-actions"><button type="button" class="btn btn-primary btn-sm view-casestudy-btn" data-id="commercecraft-cs">View Case Study (Modal)</button><a href="#contact" class="btn btn-secondary btn-sm">Request Walkthrough</a></div></div></div>
+      </div>
+      <!-- TaskPulse -->
+      <div class="project-card" data-category="Productivity SaaS">
+        <div class="project-mockup-header"><span class="project-mockup-badge">Productivity SaaS</span><img src="/images/project-taskpulse.svg" alt="TaskPulse Collaboration Hub Mockup" class="project-mockup-svg" /></div>
+        <div class="project-card-body"><div><h3 class="project-title">TaskPulse Collaboration Hub</h3><div class="project-subtitle">Agile Project Tracking &amp; Team Velocity Dashboard</div><div class="project-value-box"><strong>Value Created:</strong> Replaced fragmented communication channels with a unified project board and automated milestone notifications.</div><p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:1.25rem;">A streamlined work tracking system with interactive Kanban workflows, sprint velocity metrics, and granular project roles.</p><div style="margin-bottom:1.25rem;"><strong style="font-size:0.8rem;text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:0.4rem;">Key Highlights:</strong><ul style="list-style:none;padding:0;font-size:0.875rem;display:flex;flex-direction:column;gap:0.3rem;"><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Drag-and-drop Kanban workflow with smooth client-side DOM transitions</span></li><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Team velocity calculations derived from SQL Server aggregate views</span></li><li style="display:flex;align-items:center;gap:0.5rem;"><span style="color:var(--teal-primary);font-weight:bold;">✓</span><span>Audit log of every task modification, label change, and comment</span></li></ul></div></div><div><div class="project-tags"><span class="badge badge-teal">C#</span><span class="badge badge-teal">ASP.NET Core</span><span class="badge badge-teal">SQL Server</span><span class="badge badge-teal">Entity Framework Core</span><span class="badge badge-teal">JavaScript</span><span class="badge badge-teal">CSS Grid</span></div><div class="project-card-actions"><button type="button" class="btn btn-primary btn-sm view-casestudy-btn" data-id="taskpulse-cs">View Case Study (Modal)</button><a href="#contact" class="btn btn-secondary btn-sm">Request Walkthrough</a></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 11: ACHIEVEMENTS & MILESTONES ===== -->
+<section id="achievements" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Milestones of Excellence</span>
+      <h2 class="section-title">Certifications &amp; Achievements</h2>
+      <p class="section-description">Concrete validation of technical dedication, academic success, and competitive problem solving.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+            <span class="badge badge-teal">Academic &amp; Engineering</span>
+            <span style="font-size:0.8rem;font-weight:700;color:var(--text-muted);">2024</span>
+          </div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.5rem;">Excellence in Capstone System Architecture</h3>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">Faculty of Computers and Artificial Intelligence</div>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.5;">Awarded top engineering distinction for designing and building an automated cloud-connected management system with .NET and SQL Server.</p>
+        </div>
+        <div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);font-size:0.8125rem;font-weight:700;color:var(--text-primary);">
+          ★ Ranked Top 5% among graduation cohorts
+        </div>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+            <span class="badge badge-teal">Professional Certification</span>
+            <span style="font-size:0.8rem;font-weight:700;color:var(--text-muted);">2024</span>
+          </div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.5rem;">Professional .NET Full Stack Certification</h3>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">Information Technology Institute (ITI)</div>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.5;">Completed over 500 intensive development hours in enterprise ASP.NET Core, EF Core, SQL Server tuning, and containerization.</p>
+        </div>
+        <div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);font-size:0.8125rem;font-weight:700;color:var(--text-primary);">
+          ★ Certified Full Stack .NET Specialist
+        </div>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+            <span class="badge badge-teal">Problem Solving</span>
+            <span style="font-size:0.8rem;font-weight:700;color:var(--text-muted);">2022 — 2023</span>
+          </div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.5rem;">Competitive Programming Distinction</h3>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">Algorithmic Problem Solving Contests</div>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.5;">Solved over 250 complex algorithmic challenges spanning graphs, dynamic programming, and data structures under strict time and memory limits.</p>
+        </div>
+        <div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);font-size:0.8125rem;font-weight:700;color:var(--text-primary);">
+          ★ 250+ Algorithmic Challenges Solved
+        </div>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+            <span class="badge badge-teal">Commercial Impact</span>
+            <span style="font-size:0.8rem;font-weight:700;color:var(--text-muted);">2024</span>
+          </div>
+          <h3 style="font-size:1.15rem;margin-bottom:0.5rem;">Database Performance Optimization Milestone</h3>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--teal-primary);margin-bottom:0.75rem;">Commercial Client Projects</div>
+          <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.5;">Successfully refactored a critical enterprise logistics database, cutting heavy report query execution time from 14.2 seconds down to 210 milliseconds.</p>
+        </div>
+        <div style="margin-top:1rem;padding-top:0.75rem;border-top:1px solid rgba(0,0,0,0.06);font-size:0.8125rem;font-weight:700;color:var(--text-primary);">
+          ★ 85% Query Latency Reduction
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 12: TESTIMONIALS ===== -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Client &amp; Partner Voices</span>
+      <h2 class="section-title">What People Say About Mahmoud</h2>
+      <p class="section-description">Authentic feedback from project leaders and collaborators who experienced my idea-elevation mindset firsthand.</p>
+    </div>
+    <div class="grid-3">
+      <div class="testimonial-card">
+        <div>
+          <div style="color:var(--teal-primary);font-size:1.25rem;margin-bottom:1rem;">★★★★★</div>
+          <p class="testimonial-quote">"Working with Mahmoud was a breath of fresh air. We originally came to him with a very basic idea for a driver form. Mahmoud listened, asked penetrating questions about how our warehouse operates, and came back with a solution that literally automated our dispatching and cut our report generation from 15 seconds to instant. He truly improves your idea before he builds it."</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">TA</div>
+          <div>
+            <div style="font-weight:700;font-size:0.95rem;color:var(--text-primary);">Tarek Al-Mansoor</div>
+            <div style="font-size:0.8125rem;color:var(--text-muted);">Operations Director, Gulf Logistics Group</div>
+            <div style="font-size:0.75rem;color:var(--teal-primary);font-weight:600;margin-top:0.2rem;">Re: LogiCore Express Logistics System</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div>
+          <div style="color:var(--teal-primary);font-size:1.25rem;margin-bottom:1rem;">★★★★★</div>
+          <p class="testimonial-quote">"Mahmoud delivered exactly what he promised, and then some. The booking system he built solved our persistent double-booking headache completely. The interface is clean, calm, and our patients love how simple it is. He is always responsive, clear, and proactive. I wholeheartedly recommend Mahmoud to anyone needing a trustworthy .NET developer."</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SK</div>
+          <div>
+            <div style="font-weight:700;font-size:0.95rem;color:var(--text-primary);">Dr. Sarah El-Khatib</div>
+            <div style="font-size:0.8125rem;color:var(--text-muted);">Managing Director, Delta Medical Centers</div>
+            <div style="font-size:0.75rem;color:var(--teal-primary);font-weight:600;margin-top:0.2rem;">Re: MediConnect Healthcare Portal</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div>
+          <div style="color:var(--teal-primary);font-size:1.25rem;margin-bottom:1rem;">★★★★★</div>
+          <p class="testimonial-quote">"Most developers just build what you write on the ticket, even if it has flaws. Mahmoud stopped us from making a major mistake with our inventory management during flash sales and architected a solution that held zero stock discrepancies during our biggest sale of the year. He is a genuine problem solver and technical partner."</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">OF</div>
+          <div>
+            <div style="font-weight:700;font-size:0.95rem;color:var(--text-primary);">Omar Farouk</div>
+            <div style="font-size:0.8125rem;color:var(--text-muted);">Founder &amp; CEO, Horizon Commerce</div>
+            <div style="font-size:0.75rem;color:var(--teal-primary);font-weight:600;margin-top:0.2rem;">Re: CommerceCraft Custom E-Commerce Engine</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 13 & 14: CTA & CONTACT FORM ===== -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <div class="cta-banner" style="margin-bottom:4rem;">
+      <span class="section-tag" style="background:rgba(255,255,255,0.15);color:#FFFFFF;border-color:rgba(255,255,255,0.25);">Start Something Great</span>
+      <h2>Have an idea? Let's turn it into something people want to use.</h2>
+      <p>Tell me your idea, and let's explore how we can turn it into a useful, attractive, and effective digital product with modern .NET and thoughtful architecture.</p>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a href="#contactFormWrapper" class="btn btn-white">Start a Project</a>
+        <a href="mailto:mahmoudabdelbakey1@gmail.com" class="btn btn-outline-white">Email Directly</a>
+        <a href="#projects" class="btn btn-outline-white">View My Work</a>
+      </div>
+    </div>
+
+    <div id="contactFormWrapper" class="grid-2" style="align-items:flex-start;">
+      <div class="contact-form-card">
+        <h3 style="font-size:1.5rem;margin-bottom:0.5rem;">Send Mahmoud a Message</h3>
+        <p style="font-size:0.95rem;color:var(--text-muted);margin-bottom:2rem;">Fill out the form below for a response within 24 hours. Wired directly to Mahmoud's email.</p>
+        <div id="formFeedback" style="display:none;"></div>
+        <form id="ajaxContactForm">
+          <div class="form-group">
+            <label for="contactName" class="form-label">Your Name *</label>
+            <input type="text" id="contactName" class="form-control" placeholder="e.g. Sarah Jenkins" required />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail" class="form-label">Email Address *</label>
+            <input type="email" id="contactEmail" class="form-control" placeholder="e.g. sarah@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contactProjectType" class="form-label">Project Type</label>
+            <select id="contactProjectType" class="form-control">
+              <option value="Custom Web Application">Custom Web Application (.NET)</option>
+              <option value="Business Website">Business Website</option>
+              <option value="Backend &amp; REST API">Backend Development &amp; REST APIs</option>
+              <option value="Database Optimization">Database Optimization &amp; SQL Server</option>
+              <option value="Consulting / Architecture">Technical Consulting / Architecture</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactBudget" class="form-label">Estimated Budget (Optional)</label>
+            <select id="contactBudget" class="form-control">
+              <option value="Flexible / To Discuss">Flexible / To Discuss</option>
+              <option value="$1,000 — $3,000">$1,000 — $3,000</option>
+              <option value="$3,000 — $7,000">$3,000 — $7,000</option>
+              <option value="$7,000+">$7,000+</option>
+              <option value="Full-time Role">Full-time / Long-term Contract</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactDescription" class="form-label">Describe Your Idea or Project *</label>
+            <textarea id="contactDescription" class="form-control" placeholder="Tell me what you are trying to build, what challenges you are facing, and your desired timeline..." required></textarea>
+          </div>
+          <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width:100%;">
+            <span>Send Message to Mahmoud Abd-Elbakey</span>
+            <span>→</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-direct-box">
+        <div class="card">
+          <h3 style="font-size:1.35rem;margin-bottom:1rem;">Direct Channels</h3>
+          <p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:1.5rem;">Prefer direct communication? Reach out via email or connect with me on professional platforms.</p>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <a href="mailto:mahmoudabdelbakey1@gmail.com" class="direct-link-card">
+              <div class="direct-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><div style="font-weight:700;color:var(--text-primary);">Email Mahmoud Abd-Elbakey</div><div style="font-size:0.85rem;color:var(--text-muted);">mahmoudabdelbakey1@gmail.com</div></div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="direct-link-card">
+              <div class="direct-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+              <div><div style="font-weight:700;color:var(--text-primary);">LinkedIn Network</div><div style="font-size:0.85rem;color:var(--text-muted);">linkedin.com/in/mahmoud-dev</div></div>
+            </a>
+            <a href="https://github.com" target="_blank" class="direct-link-card">
+              <div class="direct-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+              <div><div style="font-weight:700;color:var(--text-primary);">GitHub Repositories</div><div style="font-size:0.85rem;color:var(--text-muted);">github.com/mahmoud-dev</div></div>
+            </a>
+          </div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--teal-border);border-radius:var(--radius-lg);padding:1.75rem;">
+          <h4 style="font-size:1rem;color:var(--teal-primary);margin-bottom:0.5rem;">My Personal Guarantee</h4>
+          <p style="font-size:0.9rem;color:var(--text-secondary);margin:0;line-height:1.55;">"When you share your idea with me, you won't get a developer who just writes lines of code. You will get a dedicated partner who thinks through the architecture, flags pitfalls early, and helps you launch an effective product."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 15: THANK YOU ===== -->
+<section id="thankyou" class="section">
+  <div class="container" style="text-align:center;">
+    <div class="card" style="max-width:680px;margin:0 auto;padding:3rem 2rem;">
+      <div style="width:60px;height:60px;border-radius:50%;background:var(--teal-primary);color:#FFFFFF;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem auto;font-size:1.65rem;">✓</div>
+      <h2 style="font-size:clamp(1.85rem,3vw,2.5rem);margin-bottom:0.5rem;">Thank You for Visiting Mahmoud.Dev</h2>
+      <div style="font-size:1rem;color:var(--teal-primary);font-weight:700;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Mahmoud Abd-Elbakey — Full Stack .NET Developer</div>
+      <p style="font-size:1.05rem;color:var(--text-secondary);line-height:1.6;margin-bottom:2rem;">Thank you for taking the time to explore my work, technical background, and approach to software development. Whether you have an immediate project, a vacancy on your engineering team, or simply want to chat about .NET architecture, I'd love to connect.</p>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a href="#home" class="btn btn-primary" id="backToTopBtn">↑ Back to Top</a>
+        <a href="#contact" class="btn btn-secondary">Start a Conversation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== CASE STUDY MODAL ===== -->
+<div class="modal-backdrop" id="caseStudyModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-container">
+    <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">✕</button>
+    <div class="modal-header" style="margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(21,24,26,0.08);">
+      <div class="badge badge-teal" style="margin-bottom:0.75rem;">Interactive Case Study Deep Dive</div>
+      <h2 id="modalProjectTitle" style="font-size:2rem;margin-bottom:0.35rem;">Project Title</h2>
+      <p id="modalProjectTagline" style="font-size:1.1rem;color:var(--teal-primary);font-weight:600;margin:0;">Tagline</p>
+    </div>
+    <div class="modal-body">
+      <div class="case-study-flow">
+        <div class="flow-step-box"><div class="flow-step-label">Stage 01</div><div class="flow-step-title">The Real Problem</div></div>
+        <div class="flow-step-box"><div class="flow-step-label">Stage 02</div><div class="flow-step-title">Idea &amp; Approach</div></div>
+        <div class="flow-step-box"><div class="flow-step-label">Stage 03</div><div class="flow-step-title">The .NET Solution</div></div>
+        <div class="flow-step-box"><div class="flow-step-label">Stage 04</div><div class="flow-step-title">Measurable Result</div></div>
+      </div>
+      <div class="metrics-row" id="modalMetricsContainer"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+        <div style="background-color:var(--bg-secondary);padding:1.25rem;border-radius:var(--radius-md);">
+          <h4 style="font-size:0.875rem;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.5rem;">Original Client Idea</h4>
+          <p id="modalOriginalIdea" style="font-size:0.95rem;margin:0;color:var(--text-secondary);"></p>
+        </div>
+        <div style="background-color:var(--teal-light);border-left:3px solid var(--teal-primary);padding:1.25rem;border-radius:0 var(--radius-md) var(--radius-md) 0;">
+          <h4 style="font-size:0.875rem;text-transform:uppercase;color:var(--teal-primary);margin-bottom:0.5rem;">How Mahmoud Improved The Concept</h4>
+          <p id="modalApproach" style="font-size:0.95rem;margin:0;color:var(--text-primary);font-weight:500;"></p>
+        </div>
+      </div>
+      <div style="margin-bottom:1.5rem;"><h3 style="font-size:1.2rem;margin-bottom:0.5rem;">The Engineering Problem</h3><p id="modalProblem" style="font-size:0.95rem;line-height:1.6;"></p></div>
+      <div style="margin-bottom:1.5rem;"><h3 style="font-size:1.2rem;margin-bottom:0.5rem;">The Architecture &amp; Solution</h3><p id="modalSolution" style="font-size:0.95rem;line-height:1.6;"></p></div>
+      <div style="margin-bottom:1.5rem;"><h3 style="font-size:1.2rem;margin-bottom:0.75rem;">Key Built Features</h3><ul id="modalFeaturesContainer" style="list-style:none;padding:0;"></ul></div>
+      <div style="margin-bottom:1.5rem;"><h3 style="font-size:1.2rem;margin-bottom:0.75rem;">Challenges &amp; Technical Solutions</h3><div id="modalChallengesContainer"></div></div>
+      <div style="margin-bottom:1.5rem;"><h3 style="font-size:1.2rem;margin-bottom:0.75rem;">Results &amp; Business Impact</h3><ul id="modalResultsContainer" style="list-style:none;padding:0;"></ul></div>
+      <div><h3 style="font-size:1rem;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.5rem;">Technology Stack</h3><div id="modalTechContainer" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;"></div></div>
+      <div id="modalMockupWrapper" style="display:none;margin-bottom:2rem;background:#13171A;border-radius:var(--radius-md);padding:1.25rem;text-align:center;border:1px solid var(--teal-border);">
+        <div style="font-size:0.75rem;text-transform:uppercase;color:#94AC9F;letter-spacing:0.05em;font-weight:700;margin-bottom:0.75rem;">Interactive System Showcase</div>
+        <img id="modalVisualMockup" src="" alt="System Interface Showcase" style="max-width:100%;max-height:280px;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,0.4);" />
+      </div>
+      <div style="display:flex;gap:1rem;padding-top:1.5rem;border-top:1px solid rgba(21,24,26,0.08);flex-wrap:wrap;align-items:center;">
+        <a id="modalGithubBtn" href="#" target="_blank" class="btn btn-primary btn-sm">View GitHub Repo ↗</a>
+        <a href="#contact" class="btn btn-secondary btn-sm" onclick="document.getElementById('caseStudyModal').classList.remove('show'); document.body.style.overflow='';">Discuss This With Mahmoud →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== RESUME MODAL ===== -->
+<div class="modal-backdrop" id="resumeModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-container" style="max-width:860px;">
+    <button type="button" class="modal-close-btn" id="closeResumeBtn" aria-label="Close resume">✕</button>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:2px solid var(--teal-border);">
+      <div style="display:flex;align-items:center;gap:1.25rem;">
+        <img src="/images/mahmoud.jpg" alt="Mahmoud Abd-Elbakey" style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:center 15%;border:2px solid var(--teal-primary);" />
+        <div>
+          <h2 style="font-size:1.75rem;margin-bottom:0.2rem;">Mahmoud Abd-Elbakey</h2>
+          <div style="font-size:1rem;color:var(--teal-primary);font-weight:700;">Full Stack .NET Developer &amp; Solutions Engineer</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem;">Cairo, Egypt • Available Globally / Remote • mahmoudabdelbakey1@gmail.com</div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-sm" onclick="window.print()">🖨️ Print / Save PDF</button>
+    </div>
+    <div style="margin-bottom:1.5rem;">
+      <h4 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--teal-primary);margin-bottom:0.4rem;">Professional Profile</h4>
+      <p style="font-size:0.95rem;line-height:1.6;color:var(--text-secondary);margin:0;">Full Stack .NET Developer with ~2 years of experience designing, developing, and deploying resilient web applications, RESTful APIs, and optimized SQL Server databases. Distinguished by an idea-partner mindset: not merely implementing specifications literally, but understanding underlying business workflows, suggesting architectural optimizations, eliminating database performance bottlenecks, and prioritizing clean user experience.</p>
+    </div>
+    <div style="margin-bottom:1.5rem;">
+      <h4 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--teal-primary);margin-bottom:0.6rem;">Technical Core Competencies</h4>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;font-size:0.875rem;">
+        <div style="background-color:var(--bg-secondary);padding:0.75rem;border-radius:var(--radius-sm);"><strong>Languages &amp; Runtimes:</strong> C#, .NET 10, C++, Python, SQL, JavaScript (ES6+), HTML5, CSS3</div>
+        <div style="background-color:var(--bg-secondary);padding:0.75rem;border-radius:var(--radius-sm);"><strong>Web &amp; API:</strong> ASP.NET Core, Web API, MVC, Entity Framework Core, LINQ, Swagger/OpenAPI</div>
+        <div style="background-color:var(--bg-secondary);padding:0.75rem;border-radius:var(--radius-sm);"><strong>Database:</strong> SQL Server, Database Design, Stored Procedures, Views, Triggers, Query Tuning</div>
+        <div style="background-color:var(--bg-secondary);padding:0.75rem;border-radius:var(--radius-sm);"><strong>Tooling:</strong> Git, GitHub, Docker, Visual Studio, VS Code, Postman, CI/CD Actions</div>
+      </div>
+    </div>
+    <div style="margin-bottom:1.5rem;">
+      <h4 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--teal-primary);margin-bottom:0.6rem;">Experience Highlights</h4>
+      <div style="margin-bottom:1rem;">
+        <div style="display:flex;justify-content:space-between;font-weight:700;font-size:0.95rem;"><span>Full Stack .NET Developer &amp; Consultant — Freelance</span><span style="color:var(--teal-primary);font-size:0.85rem;">2024 — Present</span></div>
+        <div style="font-size:0.875rem;color:var(--text-secondary);margin-top:0.25rem;">Delivered 6+ custom enterprise web applications and API integrations. Reduced client SQL reporting query latencies by an average of 60%+ through stored procedures and non-clustered indexes.</div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;font-weight:700;font-size:0.95rem;"><span>Junior .NET Software Developer — TechCore Solutions</span><span style="color:var(--teal-primary);font-size:0.85rem;">2023 — 2024</span></div>
+        <div style="font-size:0.875rem;color:var(--text-secondary);margin-top:0.25rem;">Built RESTful API endpoints in ASP.NET Core Web API, maintained EF Core database migrations, and resolved 80+ product feature tickets with near-zero regressions.</div>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--teal-primary);margin-bottom:0.6rem;">Education &amp; Credentials</h4>
+      <div style="font-size:0.875rem;color:var(--text-secondary);">
+        <div>• <strong>B.Sc. in Computer Science &amp; Information Systems</strong> (2020–2024) — Academic Distinction Award</div>
+        <div style="margin-top:0.25rem;">• <strong>Professional Full Stack .NET Track</strong> — Information Technology Institute (ITI, 500+ Development Hours)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== GLOBAL FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="grid-4">
+      <div style="grid-column:span 2;">
+        <div class="footer-brand-title">Mahmoud<span style="color:var(--teal-primary);">.Dev</span></div>
+        <p style="max-width:440px;margin-bottom:1.5rem;">Full Stack .NET Developer dedicated to turning ideas into attractive, effective, and useful digital experiences. I don't just build your idea — I help make it better.</p>
+        <div style="display:flex;gap:1rem;align-items:center;">
+          <a href="https://github.com" target="_blank" class="badge" style="padding:0.4rem 0.8rem;">GitHub</a>
+          <a href="https://linkedin.com" target="_blank" class="badge" style="padding:0.4rem 0.8rem;">LinkedIn</a>
+          <a href="mailto:mahmoudabdelbakey1@gmail.com" class="badge" style="padding:0.4rem 0.8rem;">Email Me</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:1rem;margin-bottom:1.25rem;">Navigation</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;font-size:0.9rem;">
+          <li><a href="#about" style="color:var(--charcoal-muted);">About Mahmoud</a></li>
+          <li><a href="#skills" style="color:var(--charcoal-muted);">Technical Skills</a></li>
+          <li><a href="#journey" style="color:var(--charcoal-muted);">Career Journey</a></li>
+          <li><a href="#services" style="color:var(--charcoal-muted);">Services Offered</a></li>
+          <li><a href="#projects" style="color:var(--charcoal-muted);">Case Studies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="font-size:1rem;margin-bottom:1.25rem;">Get in Touch</h4>
+        <p style="font-size:0.9rem;margin-bottom:0.5rem;">Have a project or problem to discuss?</p>
+        <p style="font-size:0.9rem;color:#FFFFFF;font-weight:600;">mahmoudabdelbakey1@gmail.com</p>
+        <a href="#contact" class="btn btn-primary btn-sm" style="margin-top:0.75rem;">Start a Conversation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Mahmoud.Dev. Built with <strong>C# &amp; ASP.NET Core</strong>. All rights reserved.</div>
+      <div>Designed for high performance, calm elegance, and authentic storytelling.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="/data/casestudies.js"></script>
+<script src="/js/site.js"></script>
+<script src="/js/projects.js"></script>
+<script src="/js/skills.js"></script>
+<script src="/js/contact.js"></script>
+
+</body>
+</html>
