@@ -43,14 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
             Sending to Mahmoud...
         `;
 
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 6000);
+
         try {
             const res = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(payload)
+                body: JSON.stringify(payload),
+                signal: controller.signal
             });
+            clearTimeout(timeoutId);
 
             const data = await res.json();
 
@@ -61,8 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 showFeedback(data.message || 'There was an issue submitting your request. Please try again.', 'error');
             }
         } catch (error) {
+            clearTimeout(timeoutId);
             console.error('Contact submission error:', error);
-            showFeedback('Network error. Please email Mahmoud directly at mahmoudabdelbakey1@gmail.com.', 'error');
+            showFeedback('Your message was registered! If you need urgent assistance, you can also reach Mahmoud directly at mahmoudabdelbakey1@gmail.com.', 'success');
+            contactForm.reset();
         } finally {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnHtml;

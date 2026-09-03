@@ -799,8 +799,18 @@ namespace MahmoudDev.Services
             _logger.LogInformation("New project inquiry received from {Name} ({Email}) for project type: {Type}",
                 request.Name, request.Email, request.ProjectType);
 
-            // Send Email Notification to Mahmoud
-            await TrySendEmailAsync(request);
+            // Send Email Notification in background so the client receives an instant response
+            _ = Task.Run(async () =>
+            {
+                try
+                {
+                    await TrySendEmailAsync(request);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Background email delivery error for {Email}", request.Email);
+                }
+            });
 
             return (true, "Thank you, " + request.Name + "! Your message has been received. Mahmoud will review your project details and get back to you within 24 hours.");
         }
@@ -902,6 +912,7 @@ namespace MahmoudDev.Services
 
                 using var smtp = new SmtpClient(server, port);
                 smtp.EnableSsl = true;
+                smtp.Timeout = 5000;
                 smtp.Credentials = new NetworkCredential(senderEmail, senderPassword);
 
                 await smtp.SendMailAsync(mail);
