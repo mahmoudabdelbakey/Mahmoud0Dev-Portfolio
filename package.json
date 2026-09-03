@@ -2,6 +2,9 @@
   "name": "mahmoud-dev-portfolio",
   "version": "1.0.0",
   "description": "Mahmoud Abd-Elbakey Full Stack .NET Developer Portfolio",
+  "scripts": {
+    "build": "echo Build completed successfully"
+  },
   "dependencies": {
     "nodemailer": "^6.9.14"
   }
