@@ -1,0 +1,126 @@
+@model MahmoudDev.Models.CaseStudy
+@{
+    ViewData["Title"] = Model.ProjectTitle + " — Case Study";
+}
+
+<section class="section" style="padding-top: 8rem; min-height: 80vh;">
+    <div class="container" style="max-width: 900px;">
+        <div style="margin-bottom: 2rem;">
+            <a href="/#projects" class="badge badge-teal" style="font-size: 0.85rem; text-decoration: none;">
+                ← Back to All Projects
+            </a>
+        </div>
+
+        <div style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(21, 24, 26, 0.08);">
+            <div class="badge badge-teal" style="margin-bottom: 0.75rem;">Deep Dive Case Study</div>
+            <h1 style="font-size: clamp(2.25rem, 4vw, 3rem); margin-bottom: 0.5rem;">@Model.ProjectTitle</h1>
+            <p style="font-size: 1.25rem; color: var(--teal-primary); font-weight: 600; margin: 0;">@Model.Tagline</p>
+        </div>
+
+        <!-- Metrics Row -->
+        <div class="metrics-row" style="margin-bottom: 2.5rem;">
+            @foreach (var m in Model.Metrics)
+            {
+                <div class="metric-pill">
+                    <div class="metric-pill-value">@m.Value</div>
+                    <div class="metric-pill-label">@m.Key</div>
+                </div>
+            }
+        </div>
+
+        <!-- Story Flow -->
+        <div class="case-study-flow">
+            <div class="flow-step-box">
+                <div class="flow-step-label">Stage 01</div>
+                <div class="flow-step-title">The Real Problem</div>
+            </div>
+            <div class="flow-step-box">
+                <div class="flow-step-label">Stage 02</div>
+                <div class="flow-step-title">Idea &amp; Approach</div>
+            </div>
+            <div class="flow-step-box">
+                <div class="flow-step-label">Stage 03</div>
+                <div class="flow-step-title">The .NET Solution</div>
+            </div>
+            <div class="flow-step-box">
+                <div class="flow-step-label">Stage 04</div>
+                <div class="flow-step-title">Measurable Result</div>
+            </div>
+        </div>
+
+        <!-- Concept Improvement Contrast -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.5rem 0;">
+            <div style="background-color: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-md);">
+                <h3 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">The Original Client Idea</h3>
+                <p style="font-size: 0.95rem; margin: 0; color: var(--text-secondary); line-height: 1.55;">@Model.TheOriginalIdea</p>
+            </div>
+
+            <div style="background-color: var(--teal-light); border-left: 4px solid var(--teal-primary); padding: 1.5rem; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                <h3 style="font-size: 0.85rem; text-transform: uppercase; color: var(--teal-primary); margin-bottom: 0.5rem;">How Mahmoud Elevated It</h3>
+                <p style="font-size: 0.95rem; margin: 0; color: var(--text-primary); font-weight: 500; line-height: 1.55;">@Model.MyApproach</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 2.5rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">1. The Core Engineering Problem</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary);">@Model.TheProblem</p>
+        </div>
+
+        <div style="margin-bottom: 2.5rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">2. The Architecture &amp; Solution</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary);">@Model.TheSolution</p>
+        </div>
+
+        <div style="margin-bottom: 2.5rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">3. Key Built Features</h2>
+            <ul style="list-style: none; padding: 0;">
+                @foreach (var f in Model.KeyFeatures)
+                {
+                    <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem;">
+                        <span style="color: var(--teal-primary); font-weight: bold; font-size: 1.1rem;">✓</span>
+                        <span>@f</span>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <div style="margin-bottom: 2.5rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">4. Technical Challenges &amp; Overcoming Them</h2>
+            @foreach (var c in Model.ChallengesAndSolutions)
+            {
+                <div style="background-color: var(--bg-card); border: 1px solid var(--teal-border); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1rem; border-left: 4px solid var(--teal-primary);">
+                    <div style="font-size: 0.95rem; line-height: 1.6;">@c</div>
+                </div>
+            }
+        </div>
+
+        <div style="margin-bottom: 2.5rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">5. Results &amp; Quantifiable Business Value</h2>
+            <ul style="list-style: none; padding: 0;">
+                @foreach (var r in Model.ResultsAndImpact)
+                {
+                    <li style="margin-bottom: 0.75rem; display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1rem;">
+                        <span style="color: var(--teal-primary); font-weight: bold; font-size: 1.1rem;">→</span>
+                        <span>@r</span>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <div style="margin-bottom: 3rem;">
+            <h3 style="font-size: 1rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">Technology Stack</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                @foreach (var t in Model.Technologies)
+                {
+                    <span class="badge badge-teal" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">@t</span>
+                }
+            </div>
+        </div>
+
+        <div style="background-color: var(--bg-secondary); border-radius: var(--radius-lg); padding: 2rem; text-align: center;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Need a similar architecture or solution for your company?</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.25rem;">Let's discuss how we can turn your concept into an efficient reality.</p>
+            <a href="/#contact" class="btn btn-primary">Let's Work Together</a>
+        </div>
+    </div>
+</section>

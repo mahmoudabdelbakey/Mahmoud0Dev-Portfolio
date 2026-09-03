@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@(ViewData["Title"] != null ? ViewData["Title"] + " | " : "")Mahmoud Abd-Elbakey — Full Stack .NET Developer</title>
+    <meta name="description" content="Personal portfolio of Mahmoud Abd-Elbakey, a Full Stack .NET Developer under the brand Mahmoud.Dev. I don't just build your idea — I help make it better." />
+    
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom Design System & Components (Zero Purple, Calm Palette) -->
+    <link rel="stylesheet" href="~/css/design-system.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/components.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- Top Sticky Website Navigation -->
+    <header class="navbar" role="banner">
+        <div class="container nav-container">
+            <a href="/#home" class="nav-brand" aria-label="Mahmoud.Dev Home">
+                <img src="~/images/mahmoud.jpg" alt="Mahmoud" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover; object-position: center 15%; border: 2px solid var(--teal-primary); box-shadow: var(--shadow-sm);" />
+                <span>Mahmoud<span style="color: var(--teal-primary);">.Dev</span></span>
+            </a>
+
+            <!-- Desktop Nav Links — Concise 8-item menu -->
+            <ul class="nav-links" id="mainNavLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Navigation Actions -->
+            <div class="nav-actions">
+                <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Color Theme" title="Switch between Light and Dark mode">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">
+                    Let's Talk
+                </a>
+
+                <button type="button" class="nav-toggle-mobile" id="navToggleBtn" aria-label="Toggle navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dynamic Content -->
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- Global Interactive Case Study Modal -->
+    <div class="modal-backdrop" id="caseStudyModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-container">
+            <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">✕</button>
+            
+            <div class="modal-header" style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(21, 24, 26, 0.08);">
+                <div class="badge badge-teal" style="margin-bottom: 0.75rem;">Interactive Case Study Deep Dive</div>
+                <h2 id="modalProjectTitle" style="font-size: 2rem; margin-bottom: 0.35rem;">Project Title</h2>
+                <p id="modalProjectTagline" style="font-size: 1.1rem; color: var(--teal-primary); font-weight: 600; margin: 0;">Tagline</p>
+            </div>
+
+            <div class="modal-body">
+                <!-- Storytelling Flow: Problem -> Thinking -> Solution -> Result -->
+                <div class="case-study-flow">
+                    <div class="flow-step-box">
+                        <div class="flow-step-label">Stage 01</div>
+                        <div class="flow-step-title">The Real Problem</div>
+                    </div>
+                    <div class="flow-step-box">
+                        <div class="flow-step-label">Stage 02</div>
+                        <div class="flow-step-title">Idea &amp; Approach</div>
+                    </div>
+                    <div class="flow-step-box">
+                        <div class="flow-step-label">Stage 03</div>
+                        <div class="flow-step-title">The .NET Solution</div>
+                    </div>
+                    <div class="flow-step-box">
+                        <div class="flow-step-label">Stage 04</div>
+                        <div class="flow-step-title">Measurable Result</div>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="metrics-row" id="modalMetricsContainer"></div>
+
+                <!-- Narrative Sections -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div style="background-color: var(--bg-secondary); padding: 1.25rem; border-radius: var(--radius-md);">
+                        <h4 style="font-size: 0.875rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">Original Client Idea</h4>
+                        <p id="modalOriginalIdea" style="font-size: 0.95rem; margin: 0; color: var(--text-secondary);"></p>
+                    </div>
+                    <div style="background-color: var(--teal-light); border-left: 3px solid var(--teal-primary); padding: 1.25rem; border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+                        <h4 style="font-size: 0.875rem; text-transform: uppercase; color: var(--teal-primary); margin-bottom: 0.5rem;">How Mahmoud Improved The Concept</h4>
+                        <p id="modalApproach" style="font-size: 0.95rem; margin: 0; color: var(--text-primary); font-weight: 500;"></p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">The Engineering Problem</h3>
+                    <p id="modalProblem" style="font-size: 0.95rem; line-height: 1.6;"></p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">The Architecture &amp; Solution</h3>
+                    <p id="modalSolution" style="font-size: 0.95rem; line-height: 1.6;"></p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.75rem;">Key Built Features</h3>
+                    <ul id="modalFeaturesContainer" style="list-style: none; padding: 0;"></ul>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.75rem;">Challenges &amp; Technical Solutions</h3>
+                    <div id="modalChallengesContainer"></div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.75rem;">Results &amp; Business Impact</h3>
+                    <ul id="modalResultsContainer" style="list-style: none; padding: 0;"></ul>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 1rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">Technology Stack</h3>
+                    <div id="modalTechContainer" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;"></div>
+                </div>
+
+                <!-- Visual Mockup Showcase -->
+                <div id="modalMockupWrapper" style="display: none; margin-bottom: 2rem; background: #13171A; border-radius: var(--radius-md); padding: 1.25rem; text-align: center; border: 1px solid var(--teal-border);">
+                    <div style="font-size: 0.75rem; text-transform: uppercase; color: #94AC9F; letter-spacing: 0.05em; font-weight: 700; margin-bottom: 0.75rem;">Interactive System Showcase</div>
+                    <img id="modalVisualMockup" src="" alt="System Interface Showcase" style="max-width: 100%; max-height: 280px; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.4);" />
+                </div>
+
+                <!-- Modal Action Links -->
+                <div style="display: flex; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(21, 24, 26, 0.08); flex-wrap: wrap; align-items: center;">
+                    <a id="modalGithubBtn" href="#" target="_blank" class="btn btn-primary btn-sm">View GitHub Repo ↗</a>
+                    <a id="modalDedicatedBtn" href="#" class="btn btn-secondary btn-sm">Full Dedicated Page ↗</a>
+                    <a href="#contact" class="btn btn-secondary btn-sm" onclick="document.getElementById('caseStudyModal').classList.remove('show'); document.body.style.overflow='';">Discuss This With Mahmoud →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Interactive Resume / CV Modal -->
+    <div class="modal-backdrop" id="resumeModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-container" style="max-width: 860px;">
+            <button type="button" class="modal-close-btn" id="closeResumeBtn" aria-label="Close resume">✕</button>
+            
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--teal-border);">
+                <div style="display: flex; align-items: center; gap: 1.25rem;">
+                    <img src="~/images/mahmoud.jpg" alt="Mahmoud Abd-Elbakey" style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: center 15%; border: 2px solid var(--teal-primary);" />
+                    <div>
+                        <h2 style="font-size: 1.75rem; margin-bottom: 0.2rem;">Mahmoud Abd-Elbakey</h2>
+                        <div style="font-size: 1rem; color: var(--teal-primary); font-weight: 700;">Full Stack .NET Developer &amp; Solutions Engineer</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Cairo, Egypt • Available Globally / Remote • mahmoudabdelbakey1@gmail.com</div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" onclick="window.print()">
+                    🖨️ Print / Save PDF
+                </button>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--teal-primary); margin-bottom: 0.4rem;">Professional Profile</h4>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary); margin: 0;">
+                    Full Stack .NET Developer with ~2 years of experience designing, developing, and deploying resilient web applications, RESTful APIs, and optimized SQL Server databases. Distinguished by an idea-partner mindset: not merely implementing specifications literally, but understanding underlying business workflows, suggesting architectural optimizations, eliminating database performance bottlenecks, and prioritizing clean user experience.
+                </p>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--teal-primary); margin-bottom: 0.6rem;">Technical Core Competencies</h4>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; font-size: 0.875rem;">
+                    <div style="background-color: var(--bg-secondary); padding: 0.75rem; border-radius: var(--radius-sm);">
+                        <strong>Languages &amp; Runtimes:</strong> C#, .NET 10, C++, Python, SQL, JavaScript (ES6+), HTML5, CSS3
+                    </div>
+                    <div style="background-color: var(--bg-secondary); padding: 0.75rem; border-radius: var(--radius-sm);">
+                        <strong>Web &amp; API:</strong> ASP.NET Core, Web API, MVC, Entity Framework Core, LINQ, Swagger/OpenAPI
+                    </div>
+                    <div style="background-color: var(--bg-secondary); padding: 0.75rem; border-radius: var(--radius-sm);">
+                        <strong>Database:</strong> SQL Server, Database Design, Stored Procedures, Views, Triggers, Query Tuning
+                    </div>
+                    <div style="background-color: var(--bg-secondary); padding: 0.75rem; border-radius: var(--radius-sm);">
+                        <strong>Tooling:</strong> Git, GitHub, Docker, Visual Studio, VS Code, Postman, CI/CD Actions
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--teal-primary); margin-bottom: 0.6rem;">Experience Highlights</h4>
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.95rem;">
+                        <span>Full Stack .NET Developer &amp; Consultant — Freelance</span>
+                        <span style="color: var(--teal-primary); font-size: 0.85rem;">2024 — Present</span>
+                    </div>
+                    <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                        Delivered 6+ custom enterprise web applications and API integrations. Reduced client SQL reporting query latencies by an average of 60%+ through stored procedures and non-clustered indexes.
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.95rem;">
+                        <span>Junior .NET Software Developer — TechCore Solutions</span>
+                        <span style="color: var(--teal-primary); font-size: 0.85rem;">2023 — 2024</span>
+                    </div>
+                    <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.25rem;">
+                        Built RESTful API endpoints in ASP.NET Core Web API, maintained EF Core database migrations, and resolved 80+ product feature tickets with near-zero regressions.
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--teal-primary); margin-bottom: 0.6rem;">Education &amp; Credentials</h4>
+                <div style="font-size: 0.875rem; color: var(--text-secondary);">
+                    <div>• <strong>B.Sc. in Computer Science &amp; Information Systems</strong> (2020–2024) — Academic Distinction Award</div>
+                    <div style="margin-top: 0.25rem;">• <strong>Professional Full Stack .NET Track</strong> — Information Technology Institute (ITI, 500+ Development Hours)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid-4">
+                <div style="grid-column: span 2;">
+                    <div class="footer-brand-title">Mahmoud<span style="color: var(--teal-primary);">.Dev</span></div>
+                    <p style="max-width: 440px; margin-bottom: 1.5rem;">
+                        Full Stack .NET Developer dedicated to turning ideas into attractive, effective, and useful digital experiences. I don't just build your idea — I help make it better.
+                    </p>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <a href="https://github.com" target="_blank" class="badge" style="padding: 0.4rem 0.8rem;">GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" class="badge" style="padding: 0.4rem 0.8rem;">LinkedIn</a>
+                        <a href="mailto:mahmoudabdelbakey1@gmail.com" class="badge" style="padding: 0.4rem 0.8rem;">Email Me</a>
+                        <a href="/swagger" target="_blank" class="badge badge-teal" style="padding: 0.4rem 0.8rem;">Swagger API</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="font-size: 1rem; margin-bottom: 1.25rem;">Navigation</h4>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem;">
+                        <li><a href="#about" style="color: var(--charcoal-muted);">About Mahmoud</a></li>
+                        <li><a href="#skills" style="color: var(--charcoal-muted);">Technical Skills</a></li>
+                        <li><a href="#journey" style="color: var(--charcoal-muted);">Career Journey</a></li>
+                        <li><a href="#services" style="color: var(--charcoal-muted);">Services Offered</a></li>
+                        <li><a href="#projects" style="color: var(--charcoal-muted);">Case Studies</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="font-size: 1rem; margin-bottom: 1.25rem;">Get in Touch</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Have a project or problem to discuss?</p>
+                    <p style="font-size: 0.9rem; color: #FFFFFF; font-weight: 600;">mahmoudabdelbakey1@gmail.com</p>
+                    <a href="#contact" class="btn btn-primary btn-sm" style="margin-top: 0.75rem;">Start a Conversation</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; @DateTime.UtcNow.Year Mahmoud.Dev. Built with <strong>C# &amp; ASP.NET Core</strong>. All rights reserved.
+                </div>
+                <div>
+                    Designed for high performance, calm elegance, and authentic storytelling.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client Scripts -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/projects.js" asp-append-version="true"></script>
+    <script src="~/js/skills.js" asp-append-version="true"></script>
+    <script src="~/js/contact.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
