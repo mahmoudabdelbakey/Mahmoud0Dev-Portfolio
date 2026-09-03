@@ -836,6 +836,7 @@ namespace MahmoudDev.Services
                 var server = _configuration["SmtpSettings:Server"] 
                           ?? _configuration["SmtpSettings__Server"];
 
+                var port = 587;
                 if (int.TryParse(_configuration["SmtpSettings:Port"] ?? _configuration["SmtpSettings__Port"], out var p))
                 {
                     port = p;
