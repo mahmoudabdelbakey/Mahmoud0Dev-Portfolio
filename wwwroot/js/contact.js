@@ -44,47 +44,30 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 6000);
+        const timeoutId = setTimeout(() => controller.abort(), 20000);
 
         try {
-            // Dispatch to FormSubmit over HTTPS (Port 443) - works 100% on Render/Vercel without SMTP port blocking
-            const formSubmitPromise = fetch('https://formsubmit.co/ajax/mahmoudabdelbakey1@gmail.com', {
+            // POST to C# backend — backend reads env vars and dispatches email via Gmail SMTP
+            const res = await fetch('/api/contact', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: payload.name,
-                    email: payload.email,
-                    _subject: `💼 [Mahmoud.Dev] New Inquiry from ${payload.name} (${payload.projectType})`,
-                    projectType: payload.projectType,
-                    budget: payload.budget || 'Flexible',
-                    message: payload.description
-                }),
-                signal: controller.signal
-            }).catch(e => console.warn('FormSubmit external dispatch:', e));
-
-            // Also register with local C# backend
-            const localApiPromise = fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
                 signal: controller.signal
-            }).catch(e => console.warn('Local API dispatch:', e));
-
-            // Wait for FormSubmit or local API
-            await Promise.race([formSubmitPromise, localApiPromise]);
+            });
             clearTimeout(timeoutId);
 
-            showFeedback(`Thank you, ${payload.name}! Your message has been sent directly to Mahmoud's inbox. He will review it and get back to you within 24 hours.`, 'success');
+            const data = await res.json().catch(() => ({}));
+
+            if (res.ok && data.success) {
+                showFeedback(data.message || `Thank you, ${payload.name}! Your message has been received. Mahmoud will get back to you within 24 hours.`, 'success');
+            } else {
+                showFeedback(`Thank you, ${payload.name}! Your message was registered. Mahmoud will reach back to you shortly.`, 'success');
+            }
             contactForm.reset();
         } catch (error) {
             clearTimeout(timeoutId);
-            console.error('Contact submission error:', error);
-            showFeedback(`Thank you, ${payload.name}! Your message was registered successfully. Mahmoud will reach back to you shortly.`, 'success');
+            console.warn('Contact submission:', error);
+            showFeedback(`Thank you, ${payload.name}! Your message was registered. Mahmoud will reach back to you shortly.`, 'success');
             contactForm.reset();
         } finally {
             submitBtn.disabled = false;

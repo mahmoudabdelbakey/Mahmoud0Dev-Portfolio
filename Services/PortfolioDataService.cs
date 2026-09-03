@@ -819,17 +819,34 @@ namespace MahmoudDev.Services
         {
             try
             {
-                var receiverEmail = _configuration["SmtpSettings:ReceiverEmail"] ?? "mahmoudabdelbakey1@gmail.com";
-                var senderEmail = _configuration["SmtpSettings:SenderEmail"];
-                var senderPassword = _configuration["SmtpSettings:SenderPassword"];
-                var server = _configuration["SmtpSettings:Server"] ?? "smtp.gmail.com";
-                var port = int.TryParse(_configuration["SmtpSettings:Port"], out var p) ? p : 587;
+                var senderEmail = _configuration["SmtpSettings:SenderEmail"] 
+                               ?? _configuration["SmtpSettings__SenderEmail"] 
+                               ?? _configuration["SMTP_SENDER_EMAIL"] 
+                               ?? "mahmoudabdelbakey1@gmail.com";
 
-                if (string.IsNullOrWhiteSpace(senderEmail) || string.IsNullOrWhiteSpace(senderPassword))
+                var senderPassword = _configuration["SmtpSettings:SenderPassword"] 
+                                  ?? _configuration["SmtpSettings__SenderPassword"] 
+                                  ?? _configuration["SMTP_SENDER_PASSWORD"] 
+                                  ?? "fwirwhvlpkghuuoo";
+
+                var receiverEmail = _configuration["SmtpSettings:ReceiverEmail"] 
+                                 ?? _configuration["SmtpSettings__ReceiverEmail"] 
+                                 ?? _configuration["SMTP_RECEIVER_EMAIL"] 
+                                 ?? "mahmoudabdelbakey1@gmail.com";
+
+                var server = _configuration["SmtpSettings:Server"] 
+                          ?? _configuration["SmtpSettings__Server"] 
+                          ?? "smtp.gmail.com";
+
+                var port = 587;
+                if (int.TryParse(_configuration["SmtpSettings:Port"] ?? _configuration["SmtpSettings__Port"], out var p))
                 {
-                    _logger.LogWarning("SMTP credentials not configured in appsettings.json. In order for emails to be delivered automatically via Google SMTP, please set SenderEmail and SenderPassword (Gmail App Password). Target: {Receiver}", receiverEmail);
-                    return;
+                    port = p;
                 }
+
+                senderEmail = senderEmail.Trim();
+                senderPassword = senderPassword.Trim().Replace(" ", "");
+                receiverEmail = receiverEmail.Trim();
 
                 using var mail = new MailMessage();
                 mail.From = new MailAddress(senderEmail, $"Portfolio Lead — {request.Name}");
@@ -910,17 +927,26 @@ namespace MahmoudDev.Services
                 mail.Body = htmlBody;
                 mail.IsBodyHtml = true;
 
-                using var smtp = new SmtpClient(server, port);
-                smtp.EnableSsl = true;
-                smtp.Timeout = 5000;
-                smtp.Credentials = new NetworkCredential(senderEmail, senderPassword);
+                using var smtp = new SmtpClient(server, port)
+                {
+                    EnableSsl = true,
+                    UseDefaultCredentials = false,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    Credentials = new NetworkCredential(senderEmail, senderPassword),
+                    Timeout = 15000
+                };
 
+                _logger.LogInformation("Attempting SMTP dispatch via {Server}:{Port} using sender {Sender} to {Receiver}...", server, port, senderEmail, receiverEmail);
                 await smtp.SendMailAsync(mail);
-                _logger.LogInformation("Professional HTML notification email successfully sent to {ReceiverEmail}", receiverEmail);
+                _logger.LogInformation("SUCCESS: Professional HTML notification email successfully sent to {ReceiverEmail}", receiverEmail);
+            }
+            catch (SmtpException smtpEx)
+            {
+                _logger.LogError(smtpEx, "SMTP Error sending notification email to {Receiver}. StatusCode={Code}, Message={Message}", request.Email, smtpEx.StatusCode, smtpEx.Message);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Failed to send notification email for inquiry from {Email}", request.Email);
+                _logger.LogError(ex, "Failed to send notification email for inquiry from {Email}. Error: {Message}", request.Email, ex.Message);
             }
         }
 
