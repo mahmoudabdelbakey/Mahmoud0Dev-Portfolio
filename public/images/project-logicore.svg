@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="lgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182024" />
+      <stop offset="100%" stop-color="#121517" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="12" fill="url(#lgrad)" />
+  
+  <!-- Browser Chrome / App Header -->
+  <rect width="600" height="40" fill="#14181B" rx="12 12 0 0" />
+  <circle cx="25" cy="20" r="5" fill="#E06C75" />
+  <circle cx="45" cy="20" r="5" fill="#E5C07B" />
+  <circle cx="65" cy="20" r="5" fill="#98C379" />
+  <rect x="120" y="10" width="360" height="20" rx="4" fill="#1F262B" />
+  <text x="220" y="24" fill="#78848B" font-family="sans-serif" font-size="11">app.logicore-express.internal/dispatch</text>
+
+  <!-- Sidebar -->
+  <rect x="0" y="40" width="140" height="320" fill="#161B1E" />
+  <rect x="15" y="60" width="110" height="12" rx="3" fill="#245A54" />
+  <rect x="15" y="85" width="80" height="8" rx="2" fill="#2A3338" />
+  <rect x="15" y="105" width="95" height="8" rx="2" fill="#2A3338" />
+  <rect x="15" y="125" width="70" height="8" rx="2" fill="#2A3338" />
+  <rect x="15" y="145" width="85" height="8" rx="2" fill="#2A3338" />
+
+  <!-- Main Content Dashboard -->
+  <!-- Stats Row -->
+  <rect x="160" y="60" width="125" height="60" rx="8" fill="#1F262B" stroke="#2D383F" stroke-width="1" />
+  <text x="175" y="85" fill="#78848B" font-family="sans-serif" font-size="11">Active Fleet</text>
+  <text x="175" y="108" fill="#F4F6F7" font-family="sans-serif" font-size="18" font-weight="bold">142 Units</text>
+
+  <rect x="300" y="60" width="125" height="60" rx="8" fill="#1F262B" stroke="#2D383F" stroke-width="1" />
+  <text x="315" y="85" fill="#78848B" font-family="sans-serif" font-size="11">SQL Query Latency</text>
+  <text x="315" y="108" fill="#6E897B" font-family="sans-serif" font-size="18" font-weight="bold">210 ms</text>
+
+  <rect x="440" y="60" width="135" height="60" rx="8" fill="#1F262B" stroke="#2D383F" stroke-width="1" />
+  <text x="455" y="85" fill="#78848B" font-family="sans-serif" font-size="11">Routing Conflicts</text>
+  <text x="455" y="108" fill="#3A7871" font-family="sans-serif" font-size="18" font-weight="bold">0 (Resolved)</text>
+
+  <!-- Route Dispatch Chart Area -->
+  <rect x="160" y="135" width="415" height="195" rx="8" fill="#1B2226" stroke="#245A54" stroke-width="1" />
+  <text x="180" y="165" fill="#E2EBE6" font-family="sans-serif" font-size="13" font-weight="bold">Automated Fleet Load Distribution (ASP.NET Core Engine)</text>
+
+  <!-- Chart Bars -->
+  <g transform="translate(180, 290)">
+    <rect x="10" y="-80" width="28" height="80" rx="3" fill="#245A54" />
+    <rect x="50" y="-110" width="28" height="110" rx="3" fill="#3A7871" />
+    <rect x="90" y="-65" width="28" height="65" rx="3" fill="#245A54" />
+    <rect x="130" y="-95" width="28" height="95" rx="3" fill="#6E897B" />
+    <rect x="170" y="-120" width="28" height="120" rx="3" fill="#3A7871" />
+    <rect x="210" y="-85" width="28" height="85" rx="3" fill="#245A54" />
+    <rect x="250" y="-105" width="28" height="105" rx="3" fill="#6E897B" />
+    <rect x="290" y="-70" width="28" height="70" rx="3" fill="#245A54" />
+    <rect x="330" y="-115" width="28" height="115" rx="3" fill="#3A7871" />
+  </g>
+</svg>

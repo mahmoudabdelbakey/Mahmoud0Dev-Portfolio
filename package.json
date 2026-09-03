@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Mahmoud Abd-Elbakey Full Stack .NET Developer Portfolio",
   "scripts": {
-    "build": "echo Build completed successfully"
+    "build": "node -e \"console.log(\"\"Build complete\"\")\""
   },
   "dependencies": {
     "nodemailer": "^6.9.14"
