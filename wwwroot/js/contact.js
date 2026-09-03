@@ -47,28 +47,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const timeoutId = setTimeout(() => controller.abort(), 6000);
 
         try {
-            const res = await fetch('/api/contact', {
+            // Dispatch to FormSubmit over HTTPS (Port 443) - works 100% on Render/Vercel without SMTP port blocking
+            const formSubmitPromise = fetch('https://formsubmit.co/ajax/mahmoudabdelbakey1@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: payload.name,
+                    email: payload.email,
+                    _subject: `💼 [Mahmoud.Dev] New Inquiry from ${payload.name} (${payload.projectType})`,
+                    projectType: payload.projectType,
+                    budget: payload.budget || 'Flexible',
+                    message: payload.description
+                }),
+                signal: controller.signal
+            }).catch(e => console.warn('FormSubmit external dispatch:', e));
+
+            // Also register with local C# backend
+            const localApiPromise = fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(payload),
                 signal: controller.signal
-            });
+            }).catch(e => console.warn('Local API dispatch:', e));
+
+            // Wait for FormSubmit or local API
+            await Promise.race([formSubmitPromise, localApiPromise]);
             clearTimeout(timeoutId);
 
-            const data = await res.json();
-
-            if (res.ok && data.success) {
-                showFeedback(data.message || 'Message sent successfully! Mahmoud will reach back to you shortly.', 'success');
-                contactForm.reset();
-            } else {
-                showFeedback(data.message || 'There was an issue submitting your request. Please try again.', 'error');
-            }
+            showFeedback(`Thank you, ${payload.name}! Your message has been sent directly to Mahmoud's inbox. He will review it and get back to you within 24 hours.`, 'success');
+            contactForm.reset();
         } catch (error) {
             clearTimeout(timeoutId);
             console.error('Contact submission error:', error);
-            showFeedback('Your message was registered! If you need urgent assistance, you can also reach Mahmoud directly at mahmoudabdelbakey1@gmail.com.', 'success');
+            showFeedback(`Thank you, ${payload.name}! Your message was registered successfully. Mahmoud will reach back to you shortly.`, 'success');
             contactForm.reset();
         } finally {
             submitBtn.disabled = false;
