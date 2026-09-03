@@ -31,7 +31,7 @@ const CASE_STUDIES = {
       "Successfully handling over 8,500 daily route checkpoints with zero downtime"
     ],
     metrics: { "Query Latency": "-85%", "Booking Conflicts": "0", "Weekly Hours Saved": "40+ hrs", "Uptime": "99.98%" },
-    visualMockup: "/images/project-logicore.svg",
+    visualMockup: "./images/project-logicore.svg",
     githubUrl: "https://github.com/mahmoud-dev/logicore-express"
   },
 
@@ -61,7 +61,7 @@ const CASE_STUDIES = {
       "Client expanded the system to 4 additional branch clinics within 6 months"
     ],
     metrics: { "No-Show Drop": "-62%", "Double Bookings": "Zero", "Call Time Saved": "45%", "Appointments Handled": "18,000+" },
-    visualMockup: "/images/project-mediconnect.svg",
+    visualMockup: "./images/project-mediconnect.svg",
     githubUrl: "https://github.com/mahmoud-dev/mediconnect-health"
   },
 
@@ -91,7 +91,7 @@ const CASE_STUDIES = {
       "Processed over $320,000 in transaction volume in the first quarter"
     ],
     metrics: { "Overselling Rate": "0.00%", "Speed Boost": "3.2x", "Conversion Lift": "+24%", "Processed Volume": "$320k+" },
-    visualMockup: "/images/project-commercecraft.svg",
+    visualMockup: "./images/project-commercecraft.svg",
     githubUrl: "https://github.com/mahmoud-dev/commercecraft-engine"
   },
 
@@ -121,7 +121,7 @@ const CASE_STUDIES = {
       "Adopted by 3 active engineering squads within the organization"
     ],
     metrics: { "Missed Deadlines": "-40%", "Report Latency": "120ms", "Active Squads": "3 Teams", "Card Moves Handled": "10k+" },
-    visualMockup: "/images/project-taskpulse.svg",
+    visualMockup: "./images/project-taskpulse.svg",
     githubUrl: "https://github.com/mahmoud-dev/taskpulse-hub"
   }
 };
@@ -129,3 +129,4 @@ const CASE_STUDIES = {
 function getCaseStudyById(id) {
   return CASE_STUDIES[id] || null;
 }
+
