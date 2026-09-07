@@ -1702,3 +1702,32 @@ textarea.form-control {
   margin: 0 auto 1.75rem auto;
   border: 2px solid var(--teal-primary);
 }
+
+/* --------------------------------------------------------------------------
+   15. PRINT / EXPORT CV STYLES
+   -------------------------------------------------------------------------- */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resumeModal, #resumeModal * {
+    visibility: visible;
+  }
+  #resumeModal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    padding: 0;
+  }
+  .resume-modal-container {
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .modal-close-btn, .resume-modal-container button, .resume-modal-container .btn {
+    display: none !important;
+  }
+}
