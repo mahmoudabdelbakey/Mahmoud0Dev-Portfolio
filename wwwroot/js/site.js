@@ -3,6 +3,20 @@
  * Handles navigation, smooth scrolling, scroll-spy, theme management, and micro-interactions.
  */
 
+// Ensure browser starts at top on initial visit / refresh instead of restoring scroll to bottom sections
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('load', () => {
+    if (!window.location.hash || window.location.hash === '#home' || window.location.hash === '#contact' || window.location.hash === '#contactFormWrapper') {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        if (window.location.hash === '#contact' || window.location.hash === '#contactFormWrapper') {
+            history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initTheme();
