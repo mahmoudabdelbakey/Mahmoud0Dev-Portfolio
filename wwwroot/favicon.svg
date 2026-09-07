@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#052420"/>
+      <stop offset="50%" stop-color="#0b453e"/>
+      <stop offset="100%" stop-color="#14675d"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle with subtle border -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" stroke="#2dd4bf" stroke-width="2" stroke-opacity="0.5"/>
+
+  <!-- Top subtle tech glow accent -->
+  <rect x="20" y="9" width="24" height="2.5" rx="1.25" fill="#2dd4bf" opacity="0.85"/>
+
+  <!-- Iconic .NET Brand Graphic -->
+  <g filter="url(#glow)">
+    <!-- Vibrant Cyan Dot -->
+    <circle cx="15" cy="38" r="4.5" fill="#2dd4bf"/>
+    <!-- Bold High-Contrast NET Wordmark -->
+    <text x="39" y="44" 
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Arial Black', sans-serif" 
+          font-size="25" 
+          font-weight="900" 
+          fill="#ffffff" 
+          letter-spacing="-0.5px" 
+          text-anchor="middle">NET</text>
+  </g>
+</svg>
